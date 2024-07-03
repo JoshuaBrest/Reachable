@@ -1,0 +1,13 @@
+# MacOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+
+# Swift
+.build/
+
+# App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM

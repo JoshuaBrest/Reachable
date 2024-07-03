@@ -1,0 +1,37 @@
+{
+  "indentConditionalCompilationBlocks" : true,
+  "indentSwitchCaseLabels" : false,
+  "indentation" : {
+    "spaces" : 4
+  },
+  "lineBreakAroundMultilineExpressionChainComponents" : false,
+  "lineBreakBeforeControlFlowKeywords" : false,
+  "lineBreakBeforeEachArgument" : false,
+  "lineBreakBeforeEachGenericRequirement" : false,
+  "lineLength" : 100,
+  "maximumBlankLines" : 1,
+  "multiElementCollectionTrailingCommas" : false,
+  "respectsExistingLineBreaks" : true,
+  "rules" : {
+    "AllPublicDeclarationsHaveDocumentation" : false,
+    "AlwaysUseLiteralForEmptyCollectionInit" : false,
+    "AlwaysUseLowerCamelCase" : true,
+    "AmbiguousTrailingClosureOverload" : true,
+    "BeginDocumentationCommentWithOneLineSummary" : true,
+    "FileScopedDeclarationPrivacy" : true,
+    "FullyIndirectEnum" : true,
+    "IdentifiersMustBeASCII" : true,
+    "NeverForceUnwrap" : true,
+    "NeverUseForceTry" : true,
+    "NeverUseImplicitlyUnwrappedOptionals" : true,
+    "TypeNamesShouldBeCapitalized" : true,
+    "UseEarlyExits" : true,
+    "UseExplicitNilCheckInConditions" : true,
+    "UseLetInEveryBoundCaseVariable" : true,
+    "UseShorthandTypeNames" : true,
+    "ValidateDocumentationComments" : true
+  },
+  "spacesAroundRangeFormationOperators" : false,
+  "tabWidth" : 4,
+  "version" : 1
+}
