@@ -51,6 +51,12 @@ struct HomeView: View {
         }
     }
 
+    private func filterModulo(_ locations: [RKApiSchoolConfig.RKSchoolLocation], _ modulo: Int) -> [RKApiSchoolConfig.RKSchoolLocation] {
+        locations.enumerated().compactMap { index, location in
+            index % 2 == modulo ? location : nil
+        }
+    }
+
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 16) {
@@ -91,9 +97,9 @@ struct HomeView: View {
                             .padding(32)
                     } else {
                         // Maybe a 2 by (n) grid?
-                        HStack(spacing: 10) {
+                        HStack(alignment: .top, spacing: 10) {
                             VStack(alignment: .leading, spacing: 10) {
-                                ForEach(favoriteLocations.prefix(favoriteLocations.count / 2)) {
+                                ForEach(filterModulo(favoriteLocations, 0)) {
                                     location in
                                     FavoriteLocationButtonView(
                                         location: .constant(location),
@@ -103,7 +109,7 @@ struct HomeView: View {
                                 }
                             }
                             VStack(alignment: .leading, spacing: 10) {
-                                ForEach(favoriteLocations.suffix(favoriteLocations.count / 2)) {
+                                ForEach(filterModulo(favoriteLocations, 1)) {
                                     location in
                                     FavoriteLocationButtonView(
                                         location: .constant(location),
