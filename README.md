@@ -17,6 +17,9 @@ Roadmap:
 
 Reachable is currently not available on the App Store. To install Reachable, you need to either build it from source or use TestFlight.
 
+TestFlight:
+[![Download on the App Store](https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg)](https://testflight.apple.com/join/9UVXZH8s)
+
 ## License
 
 Reachable is licensed under the GPL-3.0 license. You can find the license in the LICENSE.md file.
