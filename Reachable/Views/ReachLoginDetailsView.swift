@@ -81,18 +81,23 @@ struct ReachLoginDetailsView: View {
                     })
             }
 
-            @MainActor public func webView(
+            nonisolated public func webView(
                 _ webView: WKWebView,
                 decidePolicyFor navigationAction: WKNavigationAction,
                 decisionHandler: @escaping @MainActor (WKNavigationActionPolicy) -> Void
-            ) -> () {
+            ) -> () {  
                 guard let url = navigationAction.request.url else {
-                    decisionHandler(.allow)
+                    // Decision handler has to be called on MainActor
+                    DispatchQueue.main.async { @MainActor in
+                        decisionHandler(.allow)
+                    }
                     return
                 }
 
                 if url.host == schoolBase, url.path == "/samlACS" {
-                    decisionHandler(.cancel)
+                    DispatchQueue.main.async { @MainActor in
+                        decisionHandler(.cancel)
+                    }
                     self.getJavaScriptString(
                         webView, "document.querySelector('form input[name=\"SAMLResponse\"]').value"
                     ) { res in
@@ -105,7 +110,9 @@ struct ReachLoginDetailsView: View {
                     return
                 }
 
-                decisionHandler(.allow)
+                DispatchQueue.main.async { @MainActor in
+                    decisionHandler(.allow)
+                }
             }
         }
 
