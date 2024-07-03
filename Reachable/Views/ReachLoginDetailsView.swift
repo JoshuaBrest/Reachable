@@ -81,7 +81,7 @@ struct ReachLoginDetailsView: View {
                     })
             }
 
-            public func webView(
+            @MainActor public func webView(
                 _ webView: WKWebView,
                 decidePolicyFor navigationAction: WKNavigationAction,
                 decisionHandler: @escaping @MainActor (WKNavigationActionPolicy) -> Void
