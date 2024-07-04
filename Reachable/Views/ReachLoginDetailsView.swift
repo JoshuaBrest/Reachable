@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ReachKit
-@preconcurrency import WebKit
+import WebKit
 
 struct ReachLoginDetailsView: View {
     let reach: RKApiSearchSchools.RKSchool
@@ -81,23 +81,19 @@ struct ReachLoginDetailsView: View {
                     })
             }
 
-            public func webView(
+            @MainActor public func webView(
                 _ webView: WKWebView,
                 decidePolicyFor navigationAction: WKNavigationAction,
                 decisionHandler: @escaping @MainActor (WKNavigationActionPolicy) -> Void
-            ) {
+            ) -> () {
                 guard let url = navigationAction.request.url else {
                     // Decision handler has to be called on MainActor
-                    DispatchQueue.main.async { @MainActor in
-                        decisionHandler(.allow)
-                    }
+                    decisionHandler(.allow)
                     return
                 }
 
                 if url.host == schoolBase, url.path == "/samlACS" {
-                    DispatchQueue.main.async { @MainActor in
-                        decisionHandler(.cancel)
-                    }
+                    decisionHandler(.cancel)
                     self.getJavaScriptString(
                         webView, "document.querySelector('form input[name=\"SAMLResponse\"]').value"
                     ) { res in
@@ -110,9 +106,7 @@ struct ReachLoginDetailsView: View {
                     return
                 }
 
-                DispatchQueue.main.async { @MainActor in
-                    decisionHandler(.allow)
-                }
+                decisionHandler(.allow)
             }
         }
 
