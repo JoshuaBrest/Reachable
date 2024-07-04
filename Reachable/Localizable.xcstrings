@@ -46,7 +46,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add your favorite locations for quick access…"
+            "value" : "Add your favorite locations for quick access..."
           }
         }
       }
@@ -56,7 +56,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "More coming soon…"
+            "value" : "More coming soon..."
           }
         }
       }
@@ -196,7 +196,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Searching…"
+            "value" : "Searching..."
           }
         }
       }
