@@ -49,6 +49,7 @@
 /* Begin PBXFileReference section */
 		EB1433E42C3477B40045601D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		EB1433E62C3497DF0045601D /* ManageLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageLocationView.swift; sourceTree = "<group>"; };
+		EB39C7622C361F6A0084B1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EB39F0072C34544900B6B549 /* Reachable.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reachable.entitlements; sourceTree = "<group>"; };
 		EB7E98EC2C2F017F00A2C78D /* Reachable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reachable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7E98EF2C2F017F00A2C78D /* ReachableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachableApp.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		EB7E98EE2C2F017F00A2C78D /* Reachable */ = {
 			isa = PBXGroup;
 			children = (
+				EB39C7622C361F6A0084B1AE /* Info.plist */,
 				EB39F0072C34544900B6B549 /* Reachable.entitlements */,
 				EB7E99572C3066E800A2C78D /* ReachableDebug.entitlements */,
 				EB7E99072C2F04BB00A2C78D /* Views */,
@@ -375,6 +377,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reachable/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Reachable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -414,6 +417,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reachable/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Reachable;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
