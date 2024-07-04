@@ -80,12 +80,13 @@ struct ReachLoginDetailsView: View {
                         completion(result)
                     })
             }
-
-            @MainActor public func webView(
+            
+            #if compiler(>=6)
+            public func webView(
                 _ webView: WKWebView,
                 decidePolicyFor navigationAction: WKNavigationAction,
-                decisionHandler: @escaping @MainActor (WKNavigationActionPolicy) -> Void
-            ) -> () {
+                decisionHandler: @MainActor @escaping (WKNavigationActionPolicy) -> Void
+            ) {
                 guard let url = navigationAction.request.url else {
                     // Decision handler has to be called on MainActor
                     decisionHandler(.allow)
@@ -108,6 +109,35 @@ struct ReachLoginDetailsView: View {
 
                 decisionHandler(.allow)
             }
+            #else
+            func webView(
+                _ webView: WKWebView,
+                decidePolicyFor navigationAction: WKNavigationAction,
+                decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
+            ) {
+                guard let url = navigationAction.request.url else {
+                    // Decision handler has to be called on MainActor
+                    decisionHandler(.allow)
+                    return
+                }
+
+                if url.host == schoolBase, url.path == "/samlACS" {
+                    decisionHandler(.cancel)
+                    self.getJavaScriptString(
+                        webView, "document.querySelector('form input[name=\"SAMLResponse\"]').value"
+                    ) { res in
+                        if let res = res {
+                            self.authCallback(res)
+                        } else {
+                            self.authCallback(nil)
+                        }
+                    }
+                    return
+                }
+
+                decisionHandler(.allow)
+            }
+            #endif
         }
 
     }
