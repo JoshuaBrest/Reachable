@@ -7,7 +7,7 @@
 
 import SwiftUI
 import ReachKit
-import WebKit
+@preconcurrency import WebKit
 
 struct ReachLoginDetailsView: View {
     let reach: RKApiSearchSchools.RKSchool
@@ -85,7 +85,7 @@ struct ReachLoginDetailsView: View {
                 _ webView: WKWebView,
                 decidePolicyFor navigationAction: WKNavigationAction,
                 decisionHandler: @escaping @MainActor (WKNavigationActionPolicy) -> Void
-            ) -> () {  
+            ) {
                 guard let url = navigationAction.request.url else {
                     // Decision handler has to be called on MainActor
                     DispatchQueue.main.async { @MainActor in
