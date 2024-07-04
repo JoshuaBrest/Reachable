@@ -783,7 +783,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Add your favorite locations for quick access..."
           }
         },
@@ -967,7 +967,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "More coming soon..."
           }
         },
@@ -1151,7 +1151,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Home"
           }
         },
@@ -1335,7 +1335,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "An error occurred: %@"
           }
         },
@@ -1519,7 +1519,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Favorites"
           }
         },
@@ -1703,7 +1703,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Favorites"
           }
         },
@@ -1887,7 +1887,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Others"
           }
         },
@@ -2071,7 +2071,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Location Management"
           }
         },
@@ -2255,7 +2255,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "An error occurred while fetching school details: %@"
           }
         },
@@ -2439,7 +2439,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Sign in Failed: %@"
           }
         },
@@ -2623,7 +2623,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "We do not support your school’s login methods."
           }
         },
@@ -2807,7 +2807,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "SSO Login"
           }
         },
@@ -2991,7 +2991,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Login to %@"
           }
         },
@@ -3175,7 +3175,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Reach Login"
           }
         },
@@ -3359,8 +3359,8 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools."
+            "state" : "translated",
+            "value" : "Failed to search for schools: %@"
           }
         },
         "es" : {
@@ -3543,7 +3543,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Searching..."
           }
         },
@@ -3727,7 +3727,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "No results found."
           }
         },
@@ -3911,7 +3911,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Retry"
           }
         },
@@ -4095,7 +4095,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Search for your school"
           }
         },
@@ -4279,7 +4279,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "School Search"
           }
         },
@@ -4463,7 +4463,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Account"
           }
         },
@@ -4647,7 +4647,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Logout"
           }
         },
@@ -4831,7 +4831,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "App Info"
           }
         },
@@ -5015,7 +5015,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "App Version"
           }
         },
@@ -5199,7 +5199,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Settings"
           }
         },
