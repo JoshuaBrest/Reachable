@@ -173,8 +173,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Done"
+            "state" : "translated",
+            "value" : "完成"
           }
         },
         "zh-Hant" : {
@@ -357,8 +357,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Okay"
+            "state" : "translated",
+            "value" : "好的"
           }
         },
         "zh-Hant" : {
@@ -541,8 +541,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
+            "state" : "translated",
+            "value" : "发生错误：%@"
           }
         },
         "zh-Hant" : {
@@ -725,8 +725,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Hi, %@ (:"
+            "state" : "translated",
+            "value" : "哈咯，%@ (:"
           }
         },
         "zh-Hant" : {
@@ -909,8 +909,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Add your favorite locations for quick access..."
+            "state" : "translated",
+            "value" : "添加您喜欢的位置以便快速访问..."
           }
         },
         "zh-Hant" : {
@@ -1093,8 +1093,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "More coming soon..."
+            "state" : "translated",
+            "value" : "更多即将推出..."
           }
         },
         "zh-Hant" : {
@@ -1277,8 +1277,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Home"
+            "state" : "translated",
+            "value" : "主页"
           }
         },
         "zh-Hant" : {
@@ -1461,8 +1461,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
+            "state" : "translated",
+            "value" : "发生错误：%@"
           }
         },
         "zh-Hant" : {
@@ -1645,8 +1645,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Favorites"
+            "state" : "translated",
+            "value" : "收藏夹"
           }
         },
         "zh-Hant" : {
@@ -1829,8 +1829,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Favorites"
+            "state" : "translated",
+            "value" : "收藏夹"
           }
         },
         "zh-Hant" : {
@@ -2013,8 +2013,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Others"
+            "state" : "translated",
+            "value" : "其他"
           }
         },
         "zh-Hant" : {
@@ -2197,8 +2197,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Location Management"
+            "state" : "translated",
+            "value" : "位置管理"
           }
         },
         "zh-Hant" : {
