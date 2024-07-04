@@ -6,10 +6,10 @@ Reachable is the best way to interact with Reach Boarding. Both native and writt
 
 ## Roadmap
 
-At the moment, only SAML sign-in is supported. Additionaly SSIO is the only feature available. In the future, we plan to add more features.
+At the moment, only SAML sign-in is supported. Additionaly SISO is the only feature available. In the future, we plan to add more features.
 
 Roadmap:
-- [x] SSIO widget
+- [ ] SISO widget
 - [ ] Events
 - [ ] Leave requests
 
