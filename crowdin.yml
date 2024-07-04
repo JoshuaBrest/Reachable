@@ -1,3 +1,4 @@
 files:
   - source: /**/*.xcstrings
-    translation: '%original_path%'
+    translation: /%original_path%/%original_file_name%
+    multilingual: 1
