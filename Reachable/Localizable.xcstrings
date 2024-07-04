@@ -3318,43 +3318,43 @@
         "af" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ar" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ca" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "cs" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "da" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "el" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "en" : {
@@ -3366,133 +3366,133 @@
         "es" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "fi" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "he" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "hu" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "it" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "nl" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "no" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "pl" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "pt-PT" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ro" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "sr" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "sv" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "tr" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         }
       }
