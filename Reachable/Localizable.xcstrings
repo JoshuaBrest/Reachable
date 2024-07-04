@@ -186,7 +186,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Failed to search for schools."
+            "value" : "Failed to search for schools: %@"
           }
         }
       }
