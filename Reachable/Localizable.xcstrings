@@ -1462,7 +1462,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "发生错误：%@"
+            "value" : "发生了错误：%@"
           }
         },
         "zh-Hant" : {
@@ -2381,8 +2381,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
+            "state" : "translated",
+            "value" : "获取学校详情时发生了错误：%@"
           }
         },
         "zh-Hant" : {
@@ -2565,8 +2565,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
+            "state" : "translated",
+            "value" : "登录出错了：%@"
           }
         },
         "zh-Hant" : {
@@ -2749,8 +2749,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "We do not support your school’s login methods."
+            "state" : "translated",
+            "value" : "我们不支持您学校的登录方式。"
           }
         },
         "zh-Hant" : {
@@ -2933,8 +2933,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "SSO Login"
+            "state" : "translated",
+            "value" : "SSO 登录"
           }
         },
         "zh-Hant" : {
@@ -3117,8 +3117,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Login to %@"
+            "state" : "translated",
+            "value" : "登录到 %@"
           }
         },
         "zh-Hant" : {
@@ -3301,8 +3301,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Reach Login"
+            "state" : "translated",
+            "value" : "Reach 登录"
           }
         },
         "zh-Hant" : {
@@ -3485,8 +3485,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
+            "state" : "translated",
+            "value" : "搜索学校失败：%@"
           }
         },
         "zh-Hant" : {
@@ -3669,8 +3669,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Searching..."
+            "state" : "translated",
+            "value" : "搜索中..."
           }
         },
         "zh-Hant" : {
@@ -3853,8 +3853,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "No results found."
+            "state" : "translated",
+            "value" : "未找到结果。"
           }
         },
         "zh-Hant" : {
@@ -4037,8 +4037,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Retry"
+            "state" : "translated",
+            "value" : "重试"
           }
         },
         "zh-Hant" : {
@@ -4221,8 +4221,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Search for your school"
+            "state" : "translated",
+            "value" : "搜索您的学校"
           }
         },
         "zh-Hant" : {
@@ -4405,8 +4405,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "School Search"
+            "state" : "translated",
+            "value" : "学校搜索"
           }
         },
         "zh-Hant" : {
@@ -4589,8 +4589,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Account"
+            "state" : "translated",
+            "value" : "账户"
           }
         },
         "zh-Hant" : {
@@ -4773,8 +4773,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Logout"
+            "state" : "translated",
+            "value" : "登出"
           }
         },
         "zh-Hant" : {
@@ -4957,8 +4957,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
+            "state" : "translated",
+            "value" : "APP 信息"
           }
         },
         "zh-Hant" : {
@@ -5141,8 +5141,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
+            "state" : "translated",
+            "value" : "APP 版本"
           }
         },
         "zh-Hant" : {
@@ -5325,8 +5325,8 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Settings"
+            "state" : "translated",
+            "value" : "设置"
           }
         },
         "zh-Hant" : {
