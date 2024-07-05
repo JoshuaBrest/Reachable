@@ -15,73 +15,91 @@ struct ReachLoginSelectView: View {
     @State private var searchResults: [RKApiSearchSchools.RKSchool] = []
 
     public var onSelect: (RKApiSearchSchools.RKSchool) -> Void = { _ in }
+    
+    private var searchResultsWithIndex: [(Int, RKApiSearchSchools.RKSchool)] {
+        Array(zip(searchResults.indices, searchResults))
+    }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            Spacer()
+        VStack {
             if isLoading {
-                HStack(spacing: 8) {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                    Text("reachLoginSelect.loading")
-                }
-            } else if let error = error {
-                HStack(spacing: 8) {
-                    Image(systemName: "exclamationmark.triangle")
-                        .foregroundColor(.red)
-                    Text(
-                        String(
-                            format: String(localized: "reachLoginSelect.error"),
-                            error.localizedDescription
-                        )
-                    )
-                    .foregroundColor(.red)
-                    Button {
-                        loadSeachResults()
-                    } label: {
-                        Text("reachLoginSelect.retry")
-                            .foregroundColor(.red)
+                VStack {
+                    Spacer()
+                    HStack(spacing: 8) {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                        Text("reachLoginSelect.loading")
                     }
                 }
+                .padding()
+            } else if let error = error {
+                VStack {
+                    Spacer()
+                    HStack(spacing: 8) {
+                        Image(systemName: "exclamationmark.triangle")
+                            .foregroundColor(.red)
+                        Text(
+                            String(
+                                format: String(localized: "reachLoginSelect.error"),
+                                error.localizedDescription
+                            )
+                        )
+                        .foregroundColor(.red)
+                        Button {
+                            loadSeachResults()
+                        } label: {
+                            Text("reachLoginSelect.retry")
+                                .foregroundColor(.red)
+                        }
+                    }
+                }
+                .padding()
             } else if !shouldStartSearch() {
                 VStack {}
             } else if searchResults.isEmpty {
-                Text("reachLoginSelect.noResults")
-                    .foregroundColor(.gray)
+                VStack {
+                    Spacer()
+                    Text("reachLoginSelect.noResults")
+                        .foregroundColor(.gray)
+                }
+                .padding()
             } else {
-                List(searchResults, id: \.id) { result in
+                List(searchResultsWithIndex, id: \.1.id) { idx, result in
                     Button {
                         onSelect(result)
                     } label: {
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: 2) {
                             Text(result.name)
                                 .bold()
+                                .foregroundColor(.primary)
                             Text(result.reachDomain)
-                                .foregroundColor(.gray)
+                                .font(.caption)
+                                .foregroundColor(.secondary)
                         }
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 16)
                     }
-                    .cornerRadius(10)
-                    .listRowInsets(EdgeInsets())
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 }
-                .listStyle(PlainListStyle())
-                .frame(maxHeight: .infinity)
+                .listStyle(.insetGrouped)
             }
-            TextField("reachLoginSelect.search", text: $search)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 10)
-                .foregroundColor(.secondary)
-                .background(.thickMaterial)
-                .cornerRadius(10)
-                .padding(.bottom, 20)
-                .onChange(of: search) { _ in
-                    loadSeachResults()
-                }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            VStack(alignment: .leading) {
+                TextField("reachLoginSelect.search", text: $search)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 10)
+                    .foregroundColor(.secondary)
+                    .background(.bar)
+                    .cornerRadius(10)
+            }
+            .padding()
+            .background(.ultraThinMaterial)
+            .overlay(Divider(), alignment: .top)
         }
         .navigationTitle("reachLoginSelect.title")
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        .padding()
+        .onChange(of: search) { _ in
+            loadSeachResults()
+        }
     }
 
     func shouldStartSearch() -> Bool {
@@ -121,7 +139,8 @@ struct ReachLoginSelectView: View {
                     // Unwrap result
                     switch data {
                     case .success(let results):
-                        searchResults = results.reversed()
+                        print(results)
+                        searchResults = results
                         error = nil
                     case .failure(let error):
                         searchResults = []
@@ -134,5 +153,7 @@ struct ReachLoginSelectView: View {
 }
 
 #Preview {
-    ReachLoginSelectView()
+    NavigationStack {
+        ReachLoginSelectView(onSelect: { _ in })
+    }
 }
