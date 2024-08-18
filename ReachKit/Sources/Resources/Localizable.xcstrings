@@ -1,0 +1,144 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "api.authExtract.matrixDecodingErrorData" : {
+
+    },
+    "api.authExtract.matrixDecodingErrorDataDataConversion" : {
+
+    },
+    "api.authExtract.matrixDecodingErrorString" : {
+
+    },
+    "api.authExtract.matrixDecodingErrorStringDataConversion" : {
+
+    },
+    "api.authExtract.matrixNotFound" : {
+
+    },
+    "api.authExtract.regexInitializationFailed" : {
+
+    },
+    "api.authExtract.tokenNotFound" : {
+
+    },
+    "api.authLoginBlackbaud.decodingError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud authentication failed, failed to parse response data"
+          }
+        }
+      }
+    },
+    "api.authLoginBlackbaud.matrixDecodingError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud authentication failed, failed to parse token: %@"
+          }
+        }
+      }
+    },
+    "api.authLoginBlackbaud.urlConstructionFailed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud authentication failed, invalid Reach URL"
+          }
+        }
+      }
+    },
+    "api.authLoginBlackbaud.urlRequestError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud authentication failed, network request failed: %@"
+          }
+        }
+      }
+    },
+    "api.authLoginSaml.decodingError" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAML authentication failed, failed to parse response data"
+          }
+        }
+      }
+    },
+    "api.authLoginSAML.decodingError" : {
+
+    },
+    "api.authLoginSaml.matrixDecodingError" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAML authentication failed, failed to parse token: %@"
+          }
+        }
+      }
+    },
+    "api.authLoginSAML.matrixDecodingError" : {
+
+    },
+    "api.authLoginSaml.urlConstructionFailed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAML authentication failed, invalid Reach URL"
+          }
+        }
+      }
+    },
+    "api.authLoginSAML.urlConstructionFailed" : {
+
+    },
+    "api.authLoginSaml.urlRequestError" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SAML authentication failed, network request failed: %@"
+          }
+        }
+      }
+    },
+    "api.authLoginSAML.urlRequestError" : {
+
+    },
+    "api.schoolConfig.jsonDecodingFailed" : {
+
+    },
+    "api.schoolConfig.urlRequestError" : {
+
+    },
+    "api.searchSchools.jsonDecodingFailed" : {
+
+    },
+    "api.searchSchools.urlCreationFailed" : {
+
+    },
+    "api.searchSchools.urlRequestError" : {
+
+    },
+    "api.userLocation.jsonDecodingFailed" : {
+
+    },
+    "api.userLocation.urlRequestFailed" : {
+
+    }
+  },
+  "version" : "1.0"
+}

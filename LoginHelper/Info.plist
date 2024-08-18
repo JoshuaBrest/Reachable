@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppGroupName</key>
-	<string>$(APP_GROUP_ID)</string>
-	<key>AppLoginHelperIdentifier</key>
-	<string>cx.bashed.Reachable.LoginHelper</string>
+	<key>AppMainIdentifier</key>
+	<string>cx.bashed.Reachable</string>
+	<key>LSBackgroundOnly</key>
+	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 </dict>

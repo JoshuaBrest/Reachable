@@ -2,8 +2,6 @@
 //  HomeView.swift
 //  Reachable
 //
-//  Created by Josh on 6/28/24.
-//
 
 import SwiftUI
 import ReachKit
@@ -13,6 +11,8 @@ struct HomeView: View {
     @State private var error: Error? = nil
 
     @ObservedObject var data = RKDatabase.shared
+
+    @Environment(\.colorScheme) var colorScheme
 
     var favoriteLocations: [RKApiSchoolConfig.RKSchoolLocation] {
         guard let schoolConfig = data.data.schoolConfig else {
@@ -40,6 +40,7 @@ struct HomeView: View {
                     Spacer()
                     if location.id == loadingID {
                         ProgressView()
+                            .controlSize(.small)
                     } else if location.id == selectedID {
                         Image(systemName: "checkmark")
                             .foregroundColor(.accentColor)
@@ -48,12 +49,6 @@ struct HomeView: View {
                 .padding(8)
             }
             .buttonStyle(.bordered)
-        }
-    }
-
-    private func filterModulo(_ locations: [RKApiSchoolConfig.RKSchoolLocation], _ modulo: Int) -> [RKApiSchoolConfig.RKSchoolLocation] {
-        locations.enumerated().compactMap { index, location in
-            index % 2 == modulo ? location : nil
         }
     }
 
@@ -97,26 +92,17 @@ struct HomeView: View {
                             .padding(32)
                     } else {
                         // Maybe a 2 by (n) grid?
-                        HStack(alignment: .top, spacing: 10) {
-                            VStack(alignment: .leading, spacing: 10) {
-                                ForEach(filterModulo(favoriteLocations, 0)) {
-                                    location in
-                                    FavoriteLocationButtonView(
-                                        location: .constant(location),
-                                        selectedID: .constant(data.data.userContact?.locationID),
-                                        loadingID: $loadingID
-                                    )
-                                }
-                            }
-                            VStack(alignment: .leading, spacing: 10) {
-                                ForEach(filterModulo(favoriteLocations, 1)) {
-                                    location in
-                                    FavoriteLocationButtonView(
-                                        location: .constant(location),
-                                        selectedID: .constant(data.data.userContact?.locationID),
-                                        loadingID: $loadingID
-                                    )
-                                }
+                        LazyVGrid(
+                            columns: [.init(.adaptive(minimum: 256, maximum: 384))],
+                            spacing: 10
+                        ) {
+                            ForEach(favoriteLocations) {
+                                location in
+                                FavoriteLocationButtonView(
+                                    location: .constant(location),
+                                    selectedID: .constant(data.data.userContact?.locationID),
+                                    loadingID: $loadingID
+                                )
                             }
                         }
                     }
@@ -129,10 +115,36 @@ struct HomeView: View {
             .frame(maxWidth: .infinity)
             .padding()
         }
+        .background {
+            if let config = data.data.schoolConfig,
+                let loginBackground = config.assets.loginBackground
+            {
+                AsyncImage(url: config.reach.appendingStorageBase(path: [loginBackground])) {
+                    image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .blur(radius: 10, opaque: true)
+                        .overlay(
+                            colorScheme == .dark
+                                ? Color.black.opacity(0.6) : Color.white.opacity(0.6),
+                            ignoresSafeAreaEdges: .all)
+                } placeholder: {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity
+                )
+                .ignoresSafeArea()
+            }
+        }
         .frame(maxWidth: .infinity)
         .alert(
             String(
-                format: String(localized: "home.error"),
+                format: String(localized: "common.errorTitle"),
                 error?.localizedDescription ?? ""
             ), isPresented: .constant(error != nil)
         ) {
@@ -176,9 +188,9 @@ struct HomeView: View {
             loadData()
             loadContacts()
         }
-        .onChange(of: loadingID) { placeId in
-            if let placeId = placeId {
-                selectPlace(placeId)
+        .onChange(of: loadingID) { placeID in
+            if let placeID = placeID {
+                selectPlace(placeID)
             }
         }
     }
@@ -234,7 +246,7 @@ struct HomeView: View {
         }
     }
 
-    private func selectPlace(_ placeId: Int) {
+    private func selectPlace(_ placeID: Int) {
         guard let auth = data.data.auth else {
             return
         }
@@ -242,17 +254,17 @@ struct HomeView: View {
         Task {
             let result = await RKApiUserLocation.setUserLocation(
                 auth: auth,
-                contactId: auth.contactID,
-                locationId: placeId,
-                requestId: nil
+                contactID: auth.contactID,
+                locationID: placeID,
+                requestID: nil
             )
             DispatchQueue.main.async {
                 withAnimation {
                     switch result {
                     case .success:
-                        data.data.userContact?.locationID = placeId
+                        data.data.userContact?.locationID = placeID
                     case .failure(let error):
-                        print(error)
+                        self.error = error
                     }
                     loadingID = nil
                 }

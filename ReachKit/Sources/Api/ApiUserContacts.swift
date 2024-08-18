@@ -171,6 +171,15 @@ public enum RKApiUserContacts {
         case urlRequestFailed(Error)
         /// JSON decoding failed.
         case jsonDecodingFailed(Error)
+
+        public var errorDescription: String? {
+            switch self {
+            case .urlRequestFailed(let error):
+                return String(format: String(localized: "api.userContacts.urlRequestFailed"), error.localizedDescription)
+            case .jsonDecodingFailed(let error):
+                return String(format: String(localized: "api.userContacts.jsonDecodingFailed"), error.localizedDescription)
+            }
+        }
     }
 
     /// Fetch user contacts.

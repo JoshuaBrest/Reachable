@@ -2,8 +2,6 @@
 //  ReachLoginDetailsView.swift
 //  Reachable
 //
-//  Created by Josh on 6/28/24.
-//
 
 import SwiftUI
 import ReachKit
@@ -14,245 +12,285 @@ struct ReachLoginDetailsView: View {
     @State private var reachDetails: RKApiAuthSchoolData.RKSchoolData? = nil
     @State private var error: Error? = nil
     @State private var isLoading: Bool = false
-    @State private var reachError: Error? = nil
+    @State private var webviewTitle: String? = nil
     @State private var samlShowing: Bool = false
+    @State private var blackbaudShowing: Bool = false
 
     @ObservedObject var data = RKDatabase.shared
 
-    private struct SAMLLogin: UIViewRepresentable {
-        let url: URL
-        let schoolBase: String
-        let authCallback: (_ result: String?) -> Void
+    @Environment(\.colorScheme) var colorScheme
 
-        func makeUIView(context: Context) -> WKWebView {
-            let config = WKWebViewConfiguration()
-            config.userContentController.addUserScript(getDisableScript())
-            config.websiteDataStore = .nonPersistent()
-            return WKWebView(frame: .zero, configuration: config)
-        }
+    private struct SchoolHeaderView: View {
+        public var name: String
+        public var emblemURL: URL?
+        public var tall: Bool
 
-        func updateUIView(_ uiView: WKWebView, context: Context) {
-            let request = URLRequest(url: url)
-            uiView.load(request);
-            uiView.navigationDelegate = context.coordinator
-        }
-
-        static func dismantleUIView(_ uiView: WKWebView, coordinator: ()) {
-            uiView.stopLoading()
-        }
-
-        func makeCoordinator() -> Coordinator {
-            return Coordinator(authCallback: authCallback, schoolBase: schoolBase)
-        }
-
-        private func getDisableScript() -> WKUserScript {
-            let source: String = """
-                // Disable zoom
-                const meta = document.createElement('meta');
-                meta.name = 'viewport';
-                meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
-                var head = document.getElementsByTagName('head')[0];
-                head.appendChild(meta);
-                """
-            return WKUserScript(
-                source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        }
-
-        class Coordinator: NSObject, WKNavigationDelegate {
-            let authCallback: (_ result: String?) -> Void
-            let schoolBase: String
-
-            init(authCallback: @escaping (_ result: String?) -> Void, schoolBase: String) {
-                self.authCallback = authCallback
-                self.schoolBase = schoolBase
-            }
-
-            private func getJavaScriptString(
-                _ wk: WKWebView, _ key: String, _ completion: @escaping (String?) -> Void
-            ) {
-                var result: String? = nil
-                wk.evaluateJavaScript(
-                    key,
-                    completionHandler: { (value, error) in
-                        if let value = value as? String {
-                            result = value
-                        }
-                        completion(result)
-                    })
-            }
-            
-            #if compiler(>=6)
-            public func webView(
-                _ webView: WKWebView,
-                decidePolicyFor navigationAction: WKNavigationAction,
-                decisionHandler: @MainActor @escaping (WKNavigationActionPolicy) -> Void
-            ) {
-                guard let url = navigationAction.request.url else {
-                    // Decision handler has to be called on MainActor
-                    decisionHandler(.allow)
-                    return
-                }
-
-                if url.host == schoolBase, url.path == "/samlACS" {
-                    decisionHandler(.cancel)
-                    self.getJavaScriptString(
-                        webView, "document.querySelector('form input[name=\"SAMLResponse\"]').value"
-                    ) { res in
-                        if let res = res {
-                            self.authCallback(res)
-                        } else {
-                            self.authCallback(nil)
-                        }
+        private var image: some View {
+            Group {
+                if let emblem = emblemURL {
+                    AsyncImage(url: emblem) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } placeholder: {
+                        EmptyView()
                     }
-                    return
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    Image(systemName: "graduationcap.fill")
+                        .resizable()
+                        .padding(8)
                 }
-
-                decisionHandler(.allow)
             }
+            .padding(10)
+            .frame(width: 72, height: 72)
+            #if os(macOS)
+                .background(.bar)
             #else
-            func webView(
-                _ webView: WKWebView,
-                decidePolicyFor navigationAction: WKNavigationAction,
-                decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
-            ) {
-                guard let url = navigationAction.request.url else {
-                    // Decision handler has to be called on MainActor
-                    decisionHandler(.allow)
-                    return
-                }
-
-                if url.host == schoolBase, url.path == "/samlACS" {
-                    decisionHandler(.cancel)
-                    self.getJavaScriptString(
-                        webView, "document.querySelector('form input[name=\"SAMLResponse\"]').value"
-                    ) { res in
-                        if let res = res {
-                            self.authCallback(res)
-                        } else {
-                            self.authCallback(nil)
-                        }
-                    }
-                    return
-                }
-
-                decisionHandler(.allow)
-            }
+                .background(.thickMaterial)
             #endif
+            .clipShape(RoundedRectangle(cornerRadius: 10))
         }
 
+        var body: some View {
+            if tall {
+                VStack(spacing: 8) {
+                    image
+                    Text(
+                        String(
+                            format: String(localized: "reachLoginDetails.schoolLogin"),
+                            name)
+                    )
+                    .multilineTextAlignment(.center)
+                    .font(.title2)
+                    .bold()
+                }
+            } else {
+                HStack(spacing: 16) {
+                    image
+                    Text(
+                        String(
+                            format: String(localized: "reachLoginDetails.schoolLogin"),
+                            name)
+                    )
+                    .multilineTextAlignment(.leading)
+                    .font(.title2)
+                    .bold()
+                }
+                .frame(maxWidth: .infinity)
+            }
+        }
     }
 
     var body: some View {
-        VStack {
-            if isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-            } else if let error = error {
-                Text(
-                    String(
-                        format: String(localized: "reachLoginDetails.error"),
-                        error.localizedDescription)
-                )
-                .foregroundColor(.red)
-            } else if reachDetails == nil {
-                VStack {}
-            } else {
-                if let reachDetails = reachDetails {
-                    VStack(alignment: .leading, spacing: 20) {
-                        Spacer()
-                        HStack(spacing: 16) {
-                            // If image is available
-                            if let emblem = reachDetails.schoolEmblem {
-                                AsyncImage(url: emblem) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                } placeholder: {
-                                    ProgressView()
-                                        .progressViewStyle(CircularProgressViewStyle())
-                                }
-                                // Fit image into frame
-                                .padding(10)
-                                .frame(width: 72, height: 72)
-                                .background(.thickMaterial)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+        GeometryReader { geometry in
+            VStack {
+                if let reach = reachDetails {
+                    HStack {
+                        VStack(
+                            alignment: geometry.size.width >= ViewBreakpoints.Widths.small
+                                ? .center : .leading,
+                            spacing: 16
+                        ) {
+                            if geometry.size.width < ViewBreakpoints.Widths.small {
+                                Spacer()
                             }
-                            // Format string
-                            Text(
-                                String(
-                                    format: String(localized: "reachLoginDetails.schoolLogin"),
-                                    reachDetails.schoolName)
+                            SchoolHeaderView(
+                                name: reach.schoolName, emblemURL: reach.schoolEmblem,
+                                tall: geometry.size.width >= ViewBreakpoints.Widths.small
                             )
-                            .font(.title2)
-                            .bold()
-                            Spacer()
-                        }
-                        if let saml = reachDetails.samlData {
-                            Button {
-                                samlShowing = true
-                            } label: {
-                                Text("reachLoginDetails.samlLogin")
-                                    .padding(4)
-                                    .frame(maxWidth: .infinity)
+                            .frame(maxWidth: .infinity)
+                            if reach.samlData != nil {
+                                Button {
+                                    samlShowing = true
+                                } label: {
+                                    Text("reachLoginDetails.samlLogin")
+                                        .padding(4)
+                                        .frame(maxWidth: .infinity)
+                                }
+                                .buttonStyle(.borderedProminent)
                             }
-                            .buttonStyle(.borderedProminent)
-                            .sheet(isPresented: $samlShowing) {
-                                SAMLLogin(
-                                    url: saml.idpUrl, schoolBase: reachDetails.reachDomain,
-                                    authCallback: { result in
-                                        samlShowing = false
-                                        guard let result = result else {
-                                            reachError = NSError(
-                                                domain: "reachplus", code: 0,
-                                                userInfo: [
-                                                    NSLocalizedDescriptionKey: "SAML login failed"
-                                                ])
-                                            return
-                                        }
-
-                                        Task {
-                                            let result = await RKApiAuthLoginSAML.preformLogin(
-                                                reach: reachDetails.reachDomain, token: result)
-                                            switch result {
-                                            case .success(let res):
-                                                switch res {
-                                                case .success(let auth):
-                                                    data.data.auth = auth
-                                                case .failure(let fail):
-                                                    reachError = fail
-                                                }
-                                            case .failure(let fail):
-                                                reachError = fail
-                                            }
-                                        }
-                                    })
+                            if reach.blackbaudData != nil {
+                                Button {
+                                    blackbaudShowing = true
+                                } label: {
+                                    Text("reachLoginDetails.blackbaudLogin")
+                                        .padding(4)
+                                        .frame(maxWidth: .infinity)
+                                }
+                                .buttonStyle(.borderedProminent)
                             }
-
+                            if reach.samlData == nil && reach.blackbaudData == nil {
+                                Text("reachLoginDetails.noLogin")
+                            }
                         }
-                        if reachDetails.samlData == nil {
-                            Text("reachLoginDetails.noLogin")
+                        .frame(
+                            maxWidth: geometry.size.width >= ViewBreakpoints.Widths.small
+                                ? 384 : .infinity,
+                            maxHeight: .infinity,
+                            alignment: geometry.size.width >= ViewBreakpoints.Widths.small
+                                ? .center : .leading
+                        )
+                        .padding()
+                    }
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity,
+                        alignment: .center
+                    )
+                    .background {
+                        if let backgroundURL = reach.loginBackground {
+                            AsyncImage(url: backgroundURL) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                    .blur(radius: 10, opaque: true)
+                                    .overlay(
+                                        colorScheme == .dark
+                                            ? Color.black.opacity(0.6) : Color.white.opacity(0.6),
+                                        ignoresSafeAreaEdges: .all)
+                            } placeholder: {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle())
+                            }
+                            .frame(
+                                maxWidth: .infinity,
+                                maxHeight: .infinity
+                            )
+                            .ignoresSafeArea()
                         }
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                } else {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
                 }
             }
+            .onAppear {
+                loadDetails(reach)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            #if os(macOS)
+                .navigationSubtitle("reachLoginDetails.title")
+            #else
+                .navigationTitle("reachLoginDetails.title")
+            #endif
         }
         .alert(
             String(
-                format: String(localized: "reachLoginDetails.loginError"),
-                reachError?.localizedDescription ?? ""
-            ), isPresented: .constant(reachError != nil)
+                format: String(localized: "common.errorTitle"),
+                error?.localizedDescription ?? ""
+            ), isPresented: .constant(error != nil)
         ) {
             Button("common.okay", role: .cancel) {
-                reachError = nil
+                error = nil
             }
         }
-        .onAppear {
-            loadDetails(reach)
+        .sheet(isPresented: $samlShowing) {
+            if let saml = reachDetails?.samlData {
+                VStack {
+                    HStack(alignment: .center) {
+                        Text(createWebViewTitle("reachLoginDetails.webViewSAMLTitle"))
+                            .bold()
+                        Spacer()
+                        ExitButtonView()
+                            .onTapGesture {
+                                samlShowing = false
+                            }
+                    }
+                    .padding()
+                    .frame(alignment: .center)
+                    ReachCoordinatedLoginModel.CordinatableLoginView(
+                        title: $webviewTitle,
+                        context: ReachCoordinatedSAMLLoginModel(
+                            reach: reach.reachDomain,
+                            samlIDPURL: saml.idpURL),
+                        authCallback: { result in
+                            samlShowing = false
+                            let resultData: String
+                            switch result {
+                            case .success(let tokenData):
+                                resultData = tokenData.token
+                            case .failure(let errorData):
+                                error = errorData
+                                return
+                            }
+
+                            Task {
+                                let result = await RKApiAuthLoginSAML.preformLogin(
+                                    reach: reach.reachDomain, token: resultData)
+                                switch result {
+                                case .success(let res):
+                                    switch res {
+                                    case .success(let auth):
+                                        data.data.auth = auth
+                                    case .failure(let fail):
+                                        error = fail
+                                    }
+                                case .failure(let fail):
+                                    error = fail
+                                }
+                            }
+                        }
+                    )
+                }
+                #if os(macOS)
+                    .frame(width: 600, height: 600)
+                #endif
+            }
         }
-        .padding()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationTitle("reachLoginDetails.title")
+        .sheet(isPresented: $blackbaudShowing) {
+            if let blackbaud = reachDetails?.blackbaudData {
+                VStack {
+                    HStack(alignment: .center) {
+                        Text(createWebViewTitle("reachLoginDetails.webViewBlackbaudTitle"))
+                            .bold()
+                        Spacer()
+                        ExitButtonView()
+                            .onTapGesture {
+                                blackbaudShowing = false
+                            }
+                    }
+                    .padding()
+                    ReachCoordinatedLoginModel.CordinatableLoginView(
+                        title: $webviewTitle,
+                        context: ReachCoordinatedBlackbaudLoginModel(
+                            reach: reach.reachDomain,
+                            samlIDPURL: blackbaud.ssoURL),
+                        authCallback: { result in
+                            blackbaudShowing = false
+                            let resultData: String
+                            switch result {
+                            case .success(let tokenData):
+                                resultData = tokenData.token
+                            case .failure(let errorData):
+                                error = errorData
+                                return
+                            }
+
+                            Task {
+                                let result = await RKApiAuthLoginBlackbaud.preformLogin(
+                                    reach: reach.reachDomain, token: resultData)
+                                switch result {
+                                case .success(let res):
+                                    switch res {
+                                    case .success(let auth):
+                                        data.data.auth = auth
+                                    case .failure(let fail):
+                                        error = fail
+                                    }
+                                case .failure(let fail):
+                                    error = fail
+                                }
+                            }
+                        }
+                    )
+                }
+                #if os(macOS)
+                    .frame(width: 600, height: 600)
+                #endif
+            }
+        }
     }
 
     private func loadDetails(_ reach: RKApiSearchSchools.RKSchool) {
@@ -283,6 +321,14 @@ struct ReachLoginDetailsView: View {
             }
         }
         return
+    }
+
+    private func createWebViewTitle(_ template: LocalizedStringResource) -> String {
+        if let webviewTitle = webviewTitle {
+            return String(format: String(localized: template), webviewTitle)
+        }
+
+        return String(localized: "reachLoginDetails.webViewLoading")
     }
 }
 

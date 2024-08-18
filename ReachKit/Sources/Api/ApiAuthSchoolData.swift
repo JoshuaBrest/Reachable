@@ -22,11 +22,18 @@ public enum RKApiAuthSchoolData {
         var reachForgottenPasswordLink: String
 
         /// Enable SAML
-        var usingSaml: String
+        var usingSAML: String
         /// SAML label
         var samlLabel: String?
         /// SAML IDP URL
-        var samlIdpUrl: String?
+        var samlIDPURL: String?
+
+        /// Enable Blackbaud
+        var usingBlackbaud: String
+        /// Blackbaud label
+        var blackbaudLabel: String?
+        /// Blackbaud SSO URL
+        var blackbaudSSOURL: String?
 
         /// Coding keys
         enum CodingKeys: String, CodingKey {
@@ -36,9 +43,12 @@ public enum RKApiAuthSchoolData {
             case schoolEmblem = "schoolEmblem"
             case disableReachLogin = "hideManualLogin"
             case reachForgottenPasswordLink = "fpLink"
-            case usingSaml = "samlm"
+            case usingSAML = "samlm"
             case samlLabel = "samlLabel"
-            case samlIdpUrl = "samlIDPURL"
+            case samlIDPURL = "samlIDPURL"
+            case usingBlackbaud = "blackbaudSSOEnabled"
+            case blackbaudLabel = "bbLabel"
+            case blackbaudSSOURL = "blackbaudSSOURL"
         }
 
         /// Convert to school data.
@@ -63,10 +73,19 @@ public enum RKApiAuthSchoolData {
 
             // SAML data
             let samlData: RKSchoolSAMLData? =
-                if self.usingSaml == "1", let samlIdpUrl = URL(string: self.samlIdpUrl ?? ""),
+                if self.usingSAML == "1", let samlIDPURL = URL(string: self.samlIDPURL ?? ""),
                     let samlLabel = self.samlLabel
                 {
-                    RKSchoolSAMLData(idpUrl: samlIdpUrl, label: samlLabel)
+                    RKSchoolSAMLData(idpURL: samlIDPURL, label: samlLabel)
+                } else { nil }
+
+            // Blackbaud data
+            let blackbaudData: RKSchoolBlackbaudData? =
+                if self.usingBlackbaud == "1",
+                    let blackbaudSSOURL = URL(string: self.blackbaudSSOURL ?? ""),
+                    let blackbaudLabel = self.blackbaudLabel
+                {
+                    RKSchoolBlackbaudData(ssoURL: blackbaudSSOURL, label: blackbaudLabel)
                 } else { nil }
 
             return RKSchoolData(
@@ -75,7 +94,8 @@ public enum RKApiAuthSchoolData {
                 loginBackground: loginBackground,
                 schoolEmblem: schoolEmblem,
                 reachLoginData: reachLoginData,
-                samlData: samlData
+                samlData: samlData,
+                blackbaudData: blackbaudData
             )
         }
 
@@ -90,8 +110,16 @@ public enum RKApiAuthSchoolData {
     /// School data SAML.
     public struct RKSchoolSAMLData: Sendable, Hashable, Equatable {
         /// SAML IDP URL
-        public var idpUrl: URL
+        public var idpURL: URL
         /// SAML label
+        public var label: String
+    }
+
+    /// School data Blackbaud.
+    public struct RKSchoolBlackbaudData: Sendable, Hashable, Equatable {
+        /// SS0 URL
+        public var ssoURL: URL
+        /// Blackbaud label
         public var label: String
     }
 
@@ -109,6 +137,8 @@ public enum RKApiAuthSchoolData {
         public var reachLoginData: RKSchoolReachData?
         /// SAML data
         public var samlData: RKSchoolSAMLData?
+        /// Blackbaud data
+        public var blackbaudData: RKSchoolBlackbaudData?
     }
 
     /// Errors for when login fails.
@@ -121,6 +151,19 @@ public enum RKApiAuthSchoolData {
         case jsonDecodingFailed(Error)
         /// RKSchoolData conversion error.
         case schoolDataConversionFailed(Error)
+
+        public var errorDescription: String? {
+            switch self {
+            case .urlConstructionFailed:
+                return String(localized: "api.authSchoolData.urlConstructionFailed")
+            case .urlRequestError(let error):
+                return String(format: String(localized: "api.authSchoolData.urlRequestError"), error.localizedDescription)
+            case .jsonDecodingFailed(let error):
+                return String(format: String(localized: "api.authSchoolData.jsonDecodingFailed"), error.localizedDescription)
+            case .schoolDataConversionFailed(let error):
+                return String(format: String(localized: "api.authSchoolData.schoolDataConversionFailed"), error.localizedDescription)
+            }
+        }
     }
 
     /// Get school details.
@@ -131,11 +174,11 @@ public enum RKApiAuthSchoolData {
         RKSchoolData, RKError
     > {
         // Get URL
-        let testUrl = URL(string: "https://\(reach)")
-        guard let ogUrl = testUrl else {
+        let testURL = URL(string: "https://\(reach)")
+        guard let ogURL = testURL else {
             return .failure(.urlConstructionFailed)
         }
-        var url = ogUrl
+        var url = ogURL
 
         for component in path {
             url.appendPathComponent(component)

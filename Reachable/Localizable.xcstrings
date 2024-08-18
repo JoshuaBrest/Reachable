@@ -1,6 +1,38 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "common.appName" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reachable"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reachable"
+          }
+        }
+      }
+    },
+    "common.back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退回"
+          }
+        }
+      }
+    },
     "common.done" : {
       "localizations" : {
         "af" : {
@@ -99,13 +131,13 @@
             "value" : "Done"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Done"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Done"
@@ -181,6 +213,38 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Done"
+          }
+        }
+      }
+    },
+    "common.errorTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "发生了错误：%@"
+          }
+        }
+      }
+    },
+    "common.next" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个"
           }
         }
       }
@@ -283,13 +347,13 @@
             "value" : "Okay"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Okay"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Okay"
@@ -365,190 +429,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Okay"
-          }
-        }
-      }
-    },
-    "home.error" : {
-      "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "发生错误：%@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
           }
         }
       }
@@ -651,13 +531,13 @@
             "value" : "Hi, %@ (:"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Hi, %@ (:"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Hi, %@ (:"
@@ -784,7 +664,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add your favorite locations for quick access..."
+            "value" : "Add your favorite locations for quick access…"
           }
         },
         "es" : {
@@ -835,13 +715,13 @@
             "value" : "Add your favorite locations for quick access..."
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Add your favorite locations for quick access..."
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Add your favorite locations for quick access..."
@@ -910,7 +790,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "添加您喜欢的位置以便快速访问..."
+            "value" : "添加您喜欢的位置以便快速访问…"
           }
         },
         "zh-Hant" : {
@@ -968,7 +848,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "More coming soon..."
+            "value" : "More coming soon…"
           }
         },
         "es" : {
@@ -1019,13 +899,13 @@
             "value" : "More coming soon..."
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "More coming soon..."
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "More coming soon..."
@@ -1094,7 +974,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "更多即将推出..."
+            "value" : "更多即将推出…"
           }
         },
         "zh-Hant" : {
@@ -1203,13 +1083,13 @@
             "value" : "Home"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Home"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Home"
@@ -1285,190 +1165,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Home"
-          }
-        }
-      }
-    },
-    "manageLocation.error" : {
-      "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "发生了错误：%@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred: %@"
           }
         }
       }
@@ -1571,13 +1267,13 @@
             "value" : "Favorites"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Favorites"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Favorites"
@@ -1755,13 +1451,13 @@
             "value" : "Favorites"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Favorites"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Favorites"
@@ -1939,13 +1635,13 @@
             "value" : "Others"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Others"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Others"
@@ -2123,13 +1819,13 @@
             "value" : "Location Management"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Location Management"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Location Management"
@@ -2209,370 +1905,98 @@
         }
       }
     },
-    "reachLoginDetails.error" : {
+    "menuBar.close" : {
       "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
+            "value" : "Exit Reachable"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "获取学校详情时发生了错误：%@"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "An error occurred while fetching school details: %@"
+            "value" : "退出 Reachable"
           }
         }
       }
     },
-    "reachLoginDetails.loginError" : {
+    "menuBar.manageLocation.noFavorites" : {
       "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
+            "value" : "No favorite locations…"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "登录出错了：%@"
+            "value" : "未喜欢的位置"
+          }
+        }
+      }
+    },
+    "menuBar.notLoggedIn" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Logged In…"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Sign in Failed: %@"
+            "state" : "translated",
+            "value" : "未登录…"
+          }
+        }
+      }
+    },
+    "menuBar.show" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Reachable"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示 Reachable"
+          }
+        }
+      }
+    },
+    "reachLogin.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reachable Setup"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reachable 安排"
+          }
+        }
+      }
+    },
+    "reachLoginDetails.blackbaudLogin" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud Login"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blackbaud 登录"
           }
         }
       }
@@ -2675,13 +2099,13 @@
             "value" : "We do not support your school’s login methods."
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "We do not support your school’s login methods."
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "We do not support your school’s login methods."
@@ -2859,13 +2283,13 @@
             "value" : "SSO Login"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "SSO Login"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "SSO Login"
@@ -3043,13 +2467,13 @@
             "value" : "Login to %@"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Login to %@"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Login to %@"
@@ -3227,13 +2651,13 @@
             "value" : "Reach Login"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Reach Login"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Reach Login"
@@ -3313,186 +2737,50 @@
         }
       }
     },
-    "reachLoginSelect.error" : {
+    "reachLoginDetails.webViewBlackbaudTitle" : {
       "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
+            "value" : "%@ | Blackbaud SSO"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "搜索学校失败：%@"
+            "value" : "%@  | Blackbaud SSO"
+          }
+        }
+      }
+    },
+    "reachLoginDetails.webViewLoading" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
           }
         },
-        "zh-Hant" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "Failed to search for schools: %@"
+            "state" : "translated",
+            "value" : "加载中…"
+          }
+        }
+      }
+    },
+    "reachLoginDetails.webViewSAMLTitle" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ | SAML SSO"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ | SAML SSO"
           }
         }
       }
@@ -3544,7 +2832,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Searching..."
+            "value" : "Searching…"
           }
         },
         "es" : {
@@ -3595,13 +2883,13 @@
             "value" : "Searching..."
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Searching..."
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Searching..."
@@ -3670,7 +2958,7 @@
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "搜索中..."
+            "value" : "搜索中…"
           }
         },
         "zh-Hant" : {
@@ -3779,13 +3067,13 @@
             "value" : "No results found."
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "No results found."
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "No results found."
@@ -3963,13 +3251,13 @@
             "value" : "Retry"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Retry"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Retry"
@@ -4147,13 +3435,13 @@
             "value" : "Search for your school"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Search for your school"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Search for your school"
@@ -4331,13 +3619,13 @@
             "value" : "School Search"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "School Search"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "School Search"
@@ -4413,6 +3701,38 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "School Search"
+          }
+        }
+      }
+    },
+    "reachLoginWelcome.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome!"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎！"
+          }
+        }
+      }
+    },
+    "reachLoginWelcome.welcome" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let’s get you setup. This won’t take a minute. "
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让我们来设置一下。这不会花很长时间。"
           }
         }
       }
@@ -4515,13 +3835,13 @@
             "value" : "Account"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Account"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Account"
@@ -4699,13 +4019,13 @@
             "value" : "Logout"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Logout"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Logout"
@@ -4785,357 +4105,75 @@
         }
       }
     },
-    "settings.appInfo" : {
+    "settings.appSettings" : {
       "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App Info"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "fi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "he" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
+            "value" : "App Settings"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "APP 信息"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Info"
+            "value" : "APP 设置"
           }
         }
       }
     },
-    "settings.appInfo.version" : {
+    "settings.appSettings.launchOnStartup" : {
       "localizations" : {
-        "af" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ar" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ca" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "cs" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "da" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "el" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "App Version"
+            "value" : "Open at login"
           }
         },
-        "es" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
+            "state" : "translated",
+            "value" : "登录时打开"
+          }
+        }
+      }
+    },
+    "settings.appSettings.sparkleAutoCheck" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically Check for Updates"
           }
         },
-        "fi" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
+            "state" : "translated",
+            "value" : "自动检查更新"
+          }
+        }
+      }
+    },
+    "settings.appSettings.sparkleAutoDownload" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatically Download Updates"
           }
         },
-        "fr" : {
+        "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
+            "state" : "translated",
+            "value" : "自动下载更新"
           }
-        },
-        "he" : {
+        }
+      }
+    },
+    "settings.appSettings.version" : {
+      "localizations" : {
+        "en" : {
           "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "hu" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "it" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "no" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "pl" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "pt-BR" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "pt-PT" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ro" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "ru" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "sr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "sv" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "tr" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "uk" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "App Version"
           }
         },
@@ -5143,12 +4181,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "APP 版本"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "App Version"
           }
         }
       }
@@ -5251,13 +4283,13 @@
             "value" : "Settings"
           }
         },
-        "nl" : {
+        "nb" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Settings"
           }
         },
-        "no" : {
+        "nl" : {
           "stringUnit" : {
             "state" : "new",
             "value" : "Settings"

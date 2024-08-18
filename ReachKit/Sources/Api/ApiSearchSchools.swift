@@ -5,22 +5,24 @@ import Foundation
 /// Search schools by name.
 public enum RKApiSearchSchools {
     /// Search results.
-    private static let searchUrl =
+    private static let searchURL =
         "https://us-central1-reach4-172100.cloudfunctions.net/SchoolSearch"
 
     /// A School.
     public struct RKSchool: Sendable, Codable, Hashable, Equatable {
-        /// Exanple school.
-        public static var example: RKSchool {
-            RKSchool(
-                id: 1,
-                name: "Choate Rosemary Hall",
-                reachPrefix: "choate",
-                reachDomain: "choate.reachboarding.com",
-                countryName: "United States of America",
-                portalKey: "example"
-            )
-        }
+        #if DEBUG
+            /// Exanple school.
+            public static var example: RKSchool {
+                RKSchool(
+                    id: 1,
+                    name: "Choate Rosemary Hall",
+                    reachPrefix: "choate",
+                    reachDomain: "choate.reachboarding.com",
+                    countryName: "United States of America",
+                    portalKey: "example"
+                )
+            }
+        #endif
 
         /// School ID
         public var id: Int
@@ -61,6 +63,20 @@ public enum RKApiSearchSchools {
         /// Json decoding failed.
         case jsonDecodingFailed(Error)
 
+        public var errorDescription: String? {
+            switch self {
+            case .urlCreationFailed:
+                return String(localized: "api.searchSchools.urlCreationFailed")
+            case .urlRequestError(let error):
+                return String(
+                    format: String(localized: "api.searchSchools.urlRequestError"),
+                    error.localizedDescription)
+            case .jsonDecodingFailed(let error):
+                return String(
+                    format: String(localized: "api.searchSchools.jsonDecodingFailed"),
+                    error.localizedDescription)
+            }
+        }
     }
 
     /// Search schools by name.
@@ -68,7 +84,7 @@ public enum RKApiSearchSchools {
     /// - Returns: List of schools
     public static func searchSchools(byName name: String) async -> Result<[RKSchool], RKError> {
         // Create URL
-        guard let url = URL(string: searchUrl) else {
+        guard let url = URL(string: searchURL) else {
             return .failure(.urlCreationFailed)
         }
 

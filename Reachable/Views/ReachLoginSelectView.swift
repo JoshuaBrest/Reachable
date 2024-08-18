@@ -2,8 +2,6 @@
 //  ReachLoginSelectView.swift
 //  Reachable
 //
-//  Created by Josh on 6/28/24.
-//
 
 import SwiftUI
 import ReachKit
@@ -15,90 +13,146 @@ struct ReachLoginSelectView: View {
     @State private var searchResults: [RKApiSearchSchools.RKSchool] = []
 
     public var onSelect: (RKApiSearchSchools.RKSchool) -> Void = { _ in }
-    
+
     private var searchResultsWithIndex: [(Int, RKApiSearchSchools.RKSchool)] {
         Array(zip(searchResults.indices, searchResults))
     }
 
-    var body: some View {
-        VStack {
-            if isLoading {
-                VStack {
-                    Spacer()
-                    HStack(spacing: 8) {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle())
-                        Text("reachLoginSelect.loading")
+    private struct SearchBar: View {
+        public var placeholder: LocalizedStringKey
+        @Binding public var search: String
+
+        var body: some View {
+            TextField(placeholder, text: $search)
+                .textFieldStyle(PlainTextFieldStyle())
+                .padding(8)
+                .padding(.horizontal, 28)
+                .background(.bar)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                #if os(macOS)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 8)
+                        .stroke(.gray.opacity(0.5), lineWidth: 0.5)
                     }
-                }
-                .padding()
-            } else if let error = error {
-                VStack {
-                    Spacer()
-                    HStack(spacing: 8) {
-                        Image(systemName: "exclamationmark.triangle")
-                            .foregroundColor(.red)
-                        Text(
-                            String(
-                                format: String(localized: "reachLoginSelect.error"),
-                                error.localizedDescription
+                #endif
+                .overlay(
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                            .frame(
+                                minWidth: 0, maxWidth: .infinity, alignment: .leading
                             )
-                        )
-                        .foregroundColor(.red)
-                        Button {
-                            loadSeachResults()
-                        } label: {
-                            Text("reachLoginSelect.retry")
-                                .foregroundColor(.red)
-                        }
+                            .padding(.leading, 10)
                     }
+                )
+        }
+    }
+
+    var body: some View {
+        GeometryReader { reader in
+            VStack(
+                alignment: .center,
+                spacing: reader.size.width >= ViewBreakpoints.Widths.small ? 16 : 0
+            ) {
+                if reader.size.width >= ViewBreakpoints.Widths.small {
+                    HStack {
+                        SearchBar(placeholder: "reachLoginSelect.search", search: $search)
+                    }
+                    #if os(macOS)
+                        .frame(maxWidth: 600)
+                        .padding(.horizontal, 21)
+                    #endif
                 }
-                .padding()
-            } else if !shouldStartSearch() {
-                VStack {}
-            } else if searchResults.isEmpty {
                 VStack {
-                    Spacer()
-                    Text("reachLoginSelect.noResults")
-                        .foregroundColor(.gray)
-                }
-                .padding()
-            } else {
-                List(searchResultsWithIndex, id: \.1.id) { idx, result in
-                    Button {
-                        onSelect(result)
-                    } label: {
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(result.name)
-                                .bold()
-                                .foregroundColor(.primary)
-                            Text(result.reachDomain)
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                    if isLoading {
+                        VStack {
+                            HStack(spacing: 8) {
+                                ProgressView()
+                                    .progressViewStyle(CircularProgressViewStyle())
+                                    .controlSize(.small)
+                                Text("reachLoginSelect.loading")
+                            }
                         }
+                        .padding()
+                    } else if let error = error {
+                        VStack(spacing: 4) {
+                            Image(systemName: "exclamationmark.triangle")
+                                .foregroundColor(.red)
+                            Text(
+                                String(
+                                    format: String(localized: "common.errorTitle"),
+                                    error.localizedDescription
+                                )
+                            )
+                            .foregroundColor(.red)
+                            Button {
+                                loadSeachResults()
+                            } label: {
+                                Text("reachLoginSelect.retry")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                        .padding()
+                    } else if !shouldStartSearch() {
+                        Spacer()
+                    } else if searchResults.isEmpty {
+                        VStack {
+                            Text("reachLoginSelect.noResults")
+                                .foregroundColor(.gray)
+                        }
+                        .padding()
+                    } else {
+                        Form {
+                            ForEach(searchResultsWithIndex, id: \.1.id) { idx, result in
+                                Button {
+                                    onSelect(result)
+                                } label: {
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(result.name)
+                                            .bold()
+                                            .foregroundColor(.primary)
+                                        Text(result.reachDomain)
+                                            .font(.caption)
+                                            .foregroundColor(.secondary)
+                                    }
+                                }
+                                .buttonStyle(.plain)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .formStyle(.grouped)
+                            }
+                        }
+                        .formStyle(.grouped)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 }
-                .listStyle(.insetGrouped)
+                .frame(maxHeight: .infinity)
             }
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            VStack(alignment: .leading) {
-                TextField("reachLoginSelect.search", text: $search)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 10)
-                    .foregroundColor(.secondary)
-                    .background(.bar)
-                    .cornerRadius(10)
+            #if os(macOS)
+                .padding()
+            #endif
+            .frame(
+                maxWidth: .infinity, maxHeight: .infinity,
+                alignment: .center
+            ).safeAreaInset(edge: .bottom, spacing: 0) {
+                if reader.size.width < ViewBreakpoints.Widths.small {
+                    VStack {
+                        SearchBar(placeholder: "reachLoginSelect.search", search: $search)
+                    }
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .overlay(alignment: .top) {
+                        Divider()
+                    }
+                }
             }
-            .padding()
-            .background(.ultraThinMaterial)
-            .overlay(Divider(), alignment: .top)
-        }
-        .navigationTitle("reachLoginSelect.title")
-        .onChange(of: search) { _ in
-            loadSeachResults()
+            .onChange(of: search) { _ in
+                loadSeachResults()
+            }
+            #if os(macOS)
+                .navigationSubtitle("reachLoginSelect.title")
+            #else
+                .navigationTitle("reachLoginSelect.title")
+            #endif
         }
     }
 
@@ -124,6 +178,7 @@ struct ReachLoginSelectView: View {
             searchResults = []
         }
         // Async task
+        let search = self.search
         Task {
             // Search
             let data = await RKApiSearchSchools.searchSchools(byName: search)
@@ -139,7 +194,6 @@ struct ReachLoginSelectView: View {
                     // Unwrap result
                     switch data {
                     case .success(let results):
-                        print(results)
                         searchResults = results
                         error = nil
                     case .failure(let error):

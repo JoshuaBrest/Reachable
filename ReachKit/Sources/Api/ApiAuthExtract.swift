@@ -44,6 +44,29 @@ public enum RKApiAuthExtract: Hashable, Equatable {
         case matrixDecodingErrorDataDataConversion
         /// Matrix decoding error
         case matrixDecodingErrorData(Error)
+
+        public var errorDescription: String? {
+            switch self {
+            case .regexInitializationFailed:
+                return String(localized: "api.authExtract.regexInitializationFailed")
+            case .tokenNotFound:
+                return String(localized: "api.authExtract.tokenNotFound")
+            case .matrixNotFound:
+                return String(localized: "api.authExtract.matrixNotFound")
+            case .matrixDecodingErrorStringDataConversion:
+                return String(localized: "api.authExtract.matrixDecodingErrorStringDataConversion")
+            case .matrixDecodingErrorString(let error):
+                return String(
+                    format: String(localized: "api.authExtract.matrixDecodingErrorString"),
+                    error.localizedDescription)
+            case .matrixDecodingErrorDataDataConversion:
+                return String(localized: "api.authExtract.matrixDecodingErrorDataDataConversion")
+            case .matrixDecodingErrorData(let error):
+                return String(
+                    format: String(localized: "api.authExtract.matrixDecodingErrorData"),
+                    error.localizedDescription)
+            }
+        }
     }
 
     /// Errors for when login fails.
@@ -89,9 +112,9 @@ public enum RKApiAuthExtract: Hashable, Equatable {
 
         // Check token not -1 or -2
         if token == "-1" {
-            return .success(.failure(.unknown))
-        } else if token == "-2" {
             return .success(.failure(.userNotFound))
+        } else if token == "-2" {
+            return .success(.failure(.unknown))
         }
 
         // Decode matrix into String

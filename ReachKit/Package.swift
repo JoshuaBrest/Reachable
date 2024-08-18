@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "ReachKit",
+    defaultLocalization: "en",
     platforms: [
         .iOS(.v16),
         .macOS(.v13)
@@ -20,6 +21,9 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "ReachKit",
-            path: "Sources")
+            path: "Sources",
+            resources: [
+                .process("Resources/Localizable.xcstrings")
+            ])
     ]
 )

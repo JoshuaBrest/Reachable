@@ -2,8 +2,6 @@
 //  ManageLocationView.swift
 //  Reachable
 //
-//  Created by Josh on 7/2/24.
-//
 
 import SwiftUI
 import ReachKit
@@ -115,14 +113,19 @@ struct ManageLocationView: View {
                         }
                     }
                 }
-                .listStyle(.insetGrouped)
+                #if os(macOS)
+                    .listStyle(.bordered)
+                #else
+                    .listStyle(.insetGrouped)
+                #endif
                 .searchable(text: $search)
+
             }
         }
         .frame(maxWidth: .infinity)
         .alert(
             String(
-                format: String(localized: "manageLocation.error"),
+                format: String(localized: "common.errorTitle"),
                 error?.localizedDescription ?? ""
             ), isPresented: .constant(error != nil)
         ) {
@@ -159,37 +162,52 @@ struct ManageLocationView: View {
                         }
                     }
                 }
-                .listStyle(.insetGrouped)
-                .searchable(
-                    text: $favoriteSearch, placement: .navigationBarDrawer(displayMode: .always)
-                )
-                .navigationTitle("manageLocation.manageFavorite")
-                .navigationBarItems(
-                    trailing: Button {
-                        favoriteSheetPresented = false
-                    } label: {
-                        Text("common.done")
-                    }
-                )
-                .navigationBarTitleDisplayMode(.inline)
+                #if !(os(macOS))
+                    .listStyle(.insetGrouped)
+                    .searchable(
+                        text: $favoriteSearch, placement: .navigationBarDrawer(displayMode: .always)
+                    )
+                    .navigationTitle("manageLocation.manageFavorite")
+                    .navigationBarItems(
+                        trailing: Button {
+                            favoriteSheetPresented = false
+                        } label: {
+                            Text("common.done")
+                        }
+                    )
+                    .navigationBarTitleDisplayMode(.inline)
+                #endif
+            }
+        }
+        .onChange(of: loadingID) { placeID in
+            if let placeID = placeID {
+                selectPlace(placeID)
             }
         }
         .navigationTitle("manageLocation.title")
-        .navigationBarItems(
-            trailing: Button {
-                favoriteSheetPresented = true
-            } label: {
-                Label("manageLocation.manageFavorite", systemImage: "star")
+        #if !(os(macOS))
+            .navigationBarItems(
+                trailing: Button {
+                    favoriteSheetPresented = true
+                } label: {
+                    Label("manageLocation.manageFavorite", systemImage: "star")
+                }
+            )
+        #else
+            .toolbar {
+                ToolbarItem(placement: .secondaryAction) {
+                    Button {
+                        favoriteSheetPresented = true
+                    } label: {
+                        Label("manageLocation.manageFavorite", systemImage: "star")
+                    }
+                }
             }
-        )
-        .onChange(of: loadingID) { placeId in
-            if let placeId = placeId {
-                selectPlace(placeId)
-            }
-        }
+        #endif
+
     }
 
-    private func selectPlace(_ placeId: Int) {
+    private func selectPlace(_ placeID: Int) {
         guard let auth = data.data.auth else {
             return
         }
@@ -197,17 +215,17 @@ struct ManageLocationView: View {
         Task {
             let result = await RKApiUserLocation.setUserLocation(
                 auth: auth,
-                contactId: auth.contactID,
-                locationId: placeId,
-                requestId: nil
+                contactID: auth.contactID,
+                locationID: placeID,
+                requestID: nil
             )
             DispatchQueue.main.async {
                 withAnimation {
                     switch result {
                     case .success:
-                        data.data.userContact?.locationID = placeId
+                        data.data.userContact?.locationID = placeID
                     case .failure(let error):
-                        print(error)
+                        self.error = error
                     }
 
                     loadingID = nil

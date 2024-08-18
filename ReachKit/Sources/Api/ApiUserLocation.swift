@@ -28,11 +28,11 @@ public enum RKApiUserLocation: Hashable, Equatable {
         /// Auth token.
         let authToken: String
         /// Contact ID.
-        let contactId: Int
+        let contactID: Int
         /// Location ID.
-        let locationId: Int
+        let locationID: Int
         /// Request ID.
-        let requestId: Int?
+        let requestID: Int?
 
         // Unknown fields.
         let c: Double
@@ -41,9 +41,9 @@ public enum RKApiUserLocation: Hashable, Equatable {
 
         enum CodingKeys: String, CodingKey {
             case authToken = "authToken"
-            case contactId = "cid"
-            case locationId = "locID"
-            case requestId = "reqID"
+            case contactID = "cid"
+            case locationID = "locID"
+            case requestID = "reqID"
             case c = "c"
             case sd = "sd"
             case sdcid = "sdcid"
@@ -52,15 +52,15 @@ public enum RKApiUserLocation: Hashable, Equatable {
         /// Initialize the request.
         /// - Parameters:
         ///  - authToken: The authentication token.
-        ///  - contactId: The contact ID.
-        ///  - locationId: The location ID.
-        ///  - requestId: The request ID.
+        ///  - contactID: The contact ID.
+        ///  - locationID: The location ID.
+        ///  - requestID: The request ID.
         /// - Returns: The request.
-        public init(authToken: String, contactId: Int, locationId: Int, requestId: Int?) {
+        public init(authToken: String, contactID: Int, locationID: Int, requestID: Int?) {
             self.authToken = authToken
-            self.contactId = contactId
-            self.locationId = locationId
-            self.requestId = requestId
+            self.contactID = contactID
+            self.locationID = locationID
+            self.requestID = requestID
             self.c = -1
             self.sd = ""
             self.sdcid = 0
@@ -74,17 +74,30 @@ public enum RKApiUserLocation: Hashable, Equatable {
         case urlRequestFailed(Error)
         /// JSON decoding failed.
         case jsonDecodingFailed(Error)
+
+        public var errorDescription: String? {
+            switch self {
+            case .urlRequestFailed(let error):
+                return String(
+                    format: String(localized: "api.userLocation.urlRequestFailed"),
+                    error.localizedDescription)
+            case .jsonDecodingFailed(let error):
+                return String(
+                    format: String(localized: "api.userLocation.jsonDecodingFailed"),
+                    error.localizedDescription)
+            }
+        }
     }
 
     /// Set the user's location.
     /// - Parameters:
     ///  - auth: RKApiAuth
-    ///  - contactId: The contact ID.
-    ///  - locationId: The location ID.
-    ///  - requestId: The request ID.
+    ///  - contactID: The contact ID.
+    ///  - locationID: The location ID.
+    ///  - requestID: The request ID.
     /// - Returns: Result with Bool or RKError
     public static func setUserLocation(
-        auth: RKApiAuth, contactId: Int, locationId: Int, requestId: Int?
+        auth: RKApiAuth, contactID: Int, locationID: Int, requestID: Int?
     ) async -> Result<Bool, RKError> {
         let url = auth.appending(path: path)
 
@@ -93,8 +106,8 @@ public enum RKApiUserLocation: Hashable, Equatable {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let requestData = RKJSONRequest(
-            authToken: auth.token, contactId: contactId, locationId: locationId,
-            requestId: requestId)
+            authToken: auth.token, contactID: contactID, locationID: locationID,
+            requestID: requestID)
         request.httpBody = try? JSONEncoder().encode(requestData)
 
         // Send request

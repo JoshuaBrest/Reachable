@@ -1,9 +1,9 @@
 import Foundation
 
-/// Authentication Login SAML.
-public enum RKApiAuthLoginSAML {
+/// Authentication Login Blackbaud.
+public enum RKApiAuthLoginBlackbaud {
     /// Request path.
-    private static let path: [String] = ["samlACS"]
+    private static let path: [String] = ["blackbaud", "sso"]
 
     /// Errors for when login fails.
     public enum RKError: Sendable, Error, LocalizedError {
@@ -19,22 +19,22 @@ public enum RKApiAuthLoginSAML {
         public var errorDescription: String? {
             switch self {
             case .urlConstructionFailed:
-                return String(localized: "api.authLoginSAML.urlConstructionFailed")
+                return String(localized: "api.authLoginBlackbaud.urlConstructionFailed")
             case .matrixDecodingError(let error):
                 return String(
-                    format: String(localized: "api.authLoginSAML.matrixDecodingError"),
+                    format: String(localized: "api.authLoginBlackbaud.matrixDecodingError"),
                     error.localizedDescription)
             case .urlRequestError(let error):
                 return String(
-                    format: String(localized: "api.authLoginSAML.urlRequestError"),
+                    format: String(localized: "api.authLoginBlackbaud.urlRequestError"),
                     error.localizedDescription)
             case .decodingError:
-                return String(localized: "api.authLoginSAML.decodingError")
+                return String(localized: "api.authLoginBlackbaud.decodingError")
             }
         }
     }
 
-    /// Login with SAML.
+    /// Login with Blackbaud.
     /// - Parameters:
     ///  - reach: Reach domain
     ///  - token: Token
@@ -56,11 +56,13 @@ public enum RKApiAuthLoginSAML {
             url.appendPathComponent(component)
         }
 
+        url.append(queryItems: [
+            URLQueryItem(name: "sso_token", value: token)
+        ])
+
         // Create request
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.httpBody = RKFormData(withDictionary: ["SAMLResponse": token]).asData()
+        request.httpMethod = "GET"
 
         // Make request
         let result: Data

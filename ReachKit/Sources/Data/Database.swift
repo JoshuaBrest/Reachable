@@ -7,14 +7,30 @@ public class RKDatabase: ObservableObject, Sendable {
     public static let shared = RKDatabase()
 
     /// Database file (shared in a group)
-    private static let dbFile = FileManager.default
-        .containerURL(forSecurityApplicationGroupIdentifier: "group.cx.bashed.Reachable")?
-        .appendingPathComponent("ReachableInfo")
-        .appendingPathComponent("database.json")
+    private static let dbFile: URL? =
+        if let group = Bundle.main.object(forInfoDictionaryKey: "AppGroupName") as? String {
+            FileManager.default
+                .containerURL(forSecurityApplicationGroupIdentifier: group)?
+                .appendingPathComponent("ReachableInfo")
+                .appendingPathComponent("database.json")
+        } else {
+            nil
+        }
+
+    /// Mac Specific Settings
+    public struct RKAppConfigMacOS: Codable, Hashable, Equatable {
+        /// Sparkle should check for updates automatically
+        public var sparkleAutoCheck: Bool = true
+        /// Sparkle should download updates automatically
+        public var sparkleAutoDownload: Bool = true
+    }
 
     /// App config.
     public struct RKAppConfig: Codable, Hashable, Equatable {
+        /// Favorite Locations
         public var favoriteLocations: [Int] = []
+        /// Mac Config
+        public var macConfig: RKAppConfigMacOS = RKAppConfigMacOS()
     }
 
     /// Database

@@ -7,11 +7,41 @@ public enum RKApiSchoolConfig: Hashable, Equatable {
 
     /// School configuration data.
     public struct RKSchoolReachConfig: Sendable, Codable, Hashable, Equatable {
-        /// Storage base URL
+        /// School name acronym.
+        public var schoolNameAcronym: String?
+        /// School name.
+        public var schoolName: String
+        /// The portal websocket id.
+        public var portalWebsocketID: String
+        /// The websocket JWT.
+        public var portalWebsocketJWT: String
+        /// Storage base URL.
         public var storageBase: URL
 
+        /// Append a path to the storage base URL.
+        public func appendingStorageBase(path: [String]) -> URL {
+            return path.reduce(storageBase) { $0.appendingPathComponent($1) }
+        }
+
         enum CodingKeys: String, CodingKey {
+            case schoolNameAcronym = "acro"
+            case schoolName = "schoolName"
+            case portalWebsocketID = "portalKey"
+            case portalWebsocketJWT = "wssJWT"
             case storageBase = "storageBaseURL"
+        }
+    }
+
+    /// School asset data.
+    public struct RKSchoolAsset: Sendable, Codable, Hashable, Equatable {
+        /// Login background.
+        public var loginBackground: String?
+        /// School emblem.
+        public var schoolEmblem: String?
+
+        enum CodingKeys: String, CodingKey {
+            case loginBackground = "loginBkg"
+            case schoolEmblem = "schoolEmblem"
         }
     }
 
@@ -62,10 +92,13 @@ public enum RKApiSchoolConfig: Hashable, Equatable {
         public let reach: RKSchoolReachConfig
         /// Locations.
         public let locations: [RKSchoolLocation]
+        /// School assets.
+        public let assets: RKSchoolAsset
 
         enum CodingKeys: String, CodingKey {
             case locations = "loc"
             case reach = "reach"
+            case assets = "assets"
         }
     }
 
@@ -87,6 +120,19 @@ public enum RKApiSchoolConfig: Hashable, Equatable {
         case urlRequestError(Error)
         /// JSON decoding failed.
         case jsonDecodingFailed(Error)
+
+        public var errorDescription: String? {
+            switch self {
+            case .urlRequestError(let error):
+                return String(
+                    format: String(localized: "api.schoolConfig.urlRequestError"),
+                    error.localizedDescription)
+            case .jsonDecodingFailed(let error):
+                return String(
+                    format: String(localized: "api.schoolConfig.jsonDecodingFailed"),
+                    error.localizedDescription)
+            }
+        }
     }
 
     /// Load school configuration data.
