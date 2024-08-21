@@ -118,6 +118,18 @@
     "api.authLoginSAML.urlRequestError" : {
 
     },
+    "api.authSchoolData.jsonDecodingFailed" : {
+
+    },
+    "api.authSchoolData.schoolDataConversionFailed" : {
+
+    },
+    "api.authSchoolData.urlConstructionFailed" : {
+
+    },
+    "api.authSchoolData.urlRequestError" : {
+
+    },
     "api.schoolConfig.jsonDecodingFailed" : {
 
     },
@@ -131,6 +143,12 @@
 
     },
     "api.searchSchools.urlRequestError" : {
+
+    },
+    "api.userContacts.jsonDecodingFailed" : {
+
+    },
+    "api.userContacts.urlRequestFailed" : {
 
     },
     "api.userLocation.jsonDecodingFailed" : {
