@@ -47,7 +47,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Reachable"
           }
         },
@@ -173,7 +173,7 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Reachable"
           }
         },
@@ -231,7 +231,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Back"
           }
         },
@@ -599,7 +599,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Something went wrong: %@"
           }
         },
@@ -783,7 +783,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Next"
           }
         },
@@ -1335,7 +1335,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Add your favorite locations for quick access…"
           }
         },
@@ -1519,7 +1519,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "More coming soon…"
           }
         },
@@ -2623,7 +2623,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Exit Reachable"
           }
         },
@@ -2807,7 +2807,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "No favorite locations…"
           }
         },
@@ -2991,7 +2991,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Not Logged In…"
           }
         },
@@ -3175,7 +3175,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Show Reachable"
           }
         },
@@ -3359,7 +3359,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Reachable Setup"
           }
         },
@@ -3543,7 +3543,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Blackbaud Login"
           }
         },
@@ -4463,7 +4463,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "%@ | Blackbaud SSO"
           }
         },
@@ -4647,7 +4647,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Loading…"
           }
         },
@@ -4831,7 +4831,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "%@ | SAML SSO"
           }
         },
@@ -4957,7 +4957,7 @@
         },
         "zh-Hans" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "%@ | SAML SSO"
           }
         },
@@ -5015,7 +5015,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Searching…"
           }
         },
@@ -5935,7 +5935,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Welcome!"
           }
         },
@@ -6119,7 +6119,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Let’s get you setup. This won’t take a minute. "
           }
         },
@@ -6671,7 +6671,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "App Settings"
           }
         },
@@ -6855,7 +6855,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Open at login"
           }
         },
@@ -7039,7 +7039,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Automatically Check for Updates"
           }
         },
@@ -7223,7 +7223,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Automatically Download Updates"
           }
         },
@@ -7407,7 +7407,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "App Version"
           }
         },
