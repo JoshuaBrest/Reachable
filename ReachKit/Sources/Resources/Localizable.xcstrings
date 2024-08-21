@@ -1293,7 +1293,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Blackbaud authentication failed, failed to parse response data"
           }
         },
@@ -1477,7 +1477,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Blackbaud authentication failed, failed to parse token: %@"
           }
         },
@@ -1661,7 +1661,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Blackbaud authentication failed, invalid Reach URL"
           }
         },
@@ -1845,7 +1845,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "Blackbaud authentication failed, network request failed: %@"
           }
         },
@@ -2030,7 +2030,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "SAML authentication failed, failed to parse response data"
           }
         },
@@ -2393,7 +2393,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "SAML authentication failed, failed to parse token: %@"
           }
         },
@@ -2756,7 +2756,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "SAML authentication failed, invalid Reach URL"
           }
         },
@@ -3119,7 +3119,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "new",
+            "state" : "translated",
             "value" : "SAML authentication failed, network request failed: %@"
           }
         },
@@ -3431,6 +3431,718 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "api.authLoginSAML.urlRequestError"
+          }
+        }
+      }
+    },
+    "api.authSchoolData.jsonDecodingFailed" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.jsonDecodingFailed"
+          }
+        }
+      }
+    },
+    "api.authSchoolData.schoolDataConversionFailed" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.schoolDataConversionFailed"
+          }
+        }
+      }
+    },
+    "api.authSchoolData.urlConstructionFailed" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlConstructionFailed"
+          }
+        }
+      }
+    },
+    "api.authSchoolData.urlRequestError" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.authSchoolData.urlRequestError"
           }
         }
       }
@@ -4321,6 +5033,362 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "api.searchSchools.urlRequestError"
+          }
+        }
+      }
+    },
+    "api.userContacts.jsonDecodingFailed" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.jsonDecodingFailed"
+          }
+        }
+      }
+    },
+    "api.userContacts.urlRequestFailed" : {
+      "localizations" : {
+        "af" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ar" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ca" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "hu" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "no" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ro" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "sr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "api.userContacts.urlRequestFailed"
           }
         }
       }
