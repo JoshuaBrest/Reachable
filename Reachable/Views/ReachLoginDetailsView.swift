@@ -332,6 +332,8 @@ struct ReachLoginDetailsView: View {
     }
 }
 
-#Preview {
-    ReachLoginDetailsView(reach: RKApiSearchSchools.RKSchool.example)
-}
+#if DEBUG
+    #Preview {
+        ReachLoginDetailsView(reach: RKApiSearchSchools.RKSchool.example)
+    }
+#endif
