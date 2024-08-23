@@ -7,30 +7,6 @@
     "size" : "1024x1024"
     },
     {
-    "appearances" : [
-        {
-        "appearance" : "luminosity",
-        "value" : "dark"
-        }
-    ],
-    "filename" : "AppIcon-Dark.png",
-    "idiom" : "universal",
-    "platform" : "ios",
-    "size" : "1024x1024"
-    },
-    {
-    "appearances" : [
-        {
-        "appearance" : "luminosity",
-        "value" : "tinted"
-        }
-    ],
-    "filename" : "AppIcon-Tinted.png",
-    "idiom" : "universal",
-    "platform" : "ios",
-    "size" : "1024x1024"
-    },
-    {
       "filename" : "AppIcon-macOS-16.png",
       "idiom" : "mac",
       "scale" : "1x",
@@ -67,7 +43,7 @@
       "size" : "128x128"
     },
     {
-      "filename" : "AppIcon-macOS-256 1.png",
+      "filename" : "AppIcon-macOS-256x1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
@@ -79,7 +55,7 @@
       "size" : "256x256"
     },
     {
-      "filename" : "AppIcon-macOS-512 1.png",
+      "filename" : "AppIcon-macOS-512x1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
