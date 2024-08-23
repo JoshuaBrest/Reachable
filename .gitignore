@@ -4,9 +4,6 @@
 # Xcode
 xcuserdata/
 
-# Swift PM
-Package.resolved
-
 # Swift
 .build/
 
