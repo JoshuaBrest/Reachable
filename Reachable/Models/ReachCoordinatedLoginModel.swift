@@ -35,7 +35,9 @@ enum ReachCoordinatedLoginModel {
 
     /// The coordinator for the login view.
     /// Do not use this directly, use the `CordinatableLoginView` instead.
-    public class Coordinator<LoginContext: CordinatedLoginContext>: NSObject, WKNavigationDelegate {
+    public class Coordinator<LoginContext: CordinatedLoginContext>: NSObject, WKNavigationDelegate,
+        @unchecked Sendable
+    {
         private let authCallback: LoginContext.FinishCallback
         private let coordinatorContext: LoginContext
 
@@ -64,26 +66,30 @@ enum ReachCoordinatedLoginModel {
                 return
             }
 
-            coordinatorContext.willNavigate(
-                to: url, with: webView,
-                action: { [self] shouldNavigate in
-                    switch shouldNavigate {
-                    case .allow:
-                        action(true)
-                    case .cancel:
-                        action(false)
-                    case .finish(let data):
-                        hasIndicatedFinish = true
-                        action(false)
+            Task {
+                await MainActor.run {
+                    coordinatorContext.willNavigate(
+                        to: url, with: webView,
+                        action: { [self] shouldNavigate in
+                            switch shouldNavigate {
+                            case .allow:
+                                action(true)
+                            case .cancel:
+                                action(false)
+                            case .finish(let data):
+                                hasIndicatedFinish = true
+                                action(false)
 
-                        switch data {
-                        case .success(let data):
-                            authCallback(.success(data))
-                        case .failure(let error):
-                            authCallback(.failure(error))
-                        }
-                    }
-                })
+                                switch data {
+                                case .success(let data):
+                                    authCallback(.success(data))
+                                case .failure(let error):
+                                    authCallback(.failure(error))
+                                }
+                            }
+                        })
+                }
+            }
         }
 
         // The SDK changed and is not backwards compatible
@@ -105,6 +111,7 @@ enum ReachCoordinatedLoginModel {
                 decidePolicyFor navigationAction: WKNavigationAction,
                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
             ) {
+
                 handlePageNavigation(
                     with: webView, policy: navigationAction,
                     action: { result in

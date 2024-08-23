@@ -12,7 +12,7 @@
 		EB49E7AF2C46B31E00C023DD /* AppDelegateMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E7AE2C46B31E00C023DD /* AppDelegateMacOS.swift */; };
 		EB49E7B22C46B40100C023DD /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E7B12C46B40100C023DD /* MenuBarView.swift */; };
 		EB49E7BA2C46C9D700C023DD /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E7B92C46C9D700C023DD /* LoginHelper.swift */; };
-		EB49E7CD2C46CE0E00C023DD /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB49E7B72C46C9D700C023DD /* LoginHelper.app */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EB49E7CD2C46CE0E00C023DD /* LoginHelper.app in Copy Files */ = {isa = PBXBuildFile; fileRef = EB49E7B72C46C9D700C023DD /* LoginHelper.app */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EB7E98F02C2F017F00A2C78D /* ReachableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E98EF2C2F017F00A2C78D /* ReachableApp.swift */; };
 		EB7E98F22C2F017F00A2C78D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E98F12C2F017F00A2C78D /* ContentView.swift */; };
 		EB7E98F42C2F018000A2C78D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7E98F32C2F018000A2C78D /* Assets.xcassets */; };
@@ -23,23 +23,27 @@
 		EB7E99132C2F154900A2C78D /* ReachLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E99122C2F154900A2C78D /* ReachLoginView.swift */; };
 		EB7E99172C2F7FA500A2C78D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E99162C2F7FA500A2C78D /* HomeView.swift */; };
 		EB7E991A2C2F806B00A2C78D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E99192C2F806B00A2C78D /* SettingsView.swift */; };
-		EB9A80CE2C30BAD300CBCA68 /* ReachKit in Frameworks */ = {isa = PBXBuildFile; productRef = EB9A80CD2C30BAD300CBCA68 /* ReachKit */; };
+		EB9286BF2C78F8E200A6FD36 /* ExitButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9286BE2C78F8E200A6FD36 /* ExitButtonView.swift */; };
+		EB9286C22C78F92900A6FD36 /* ReachCoordinatedBlackbaudLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9286C12C78F92900A6FD36 /* ReachCoordinatedBlackbaudLoginModel.swift */; };
+		EB9286C42C78F95200A6FD36 /* ReachCoordinatedLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9286C32C78F95200A6FD36 /* ReachCoordinatedLoginModel.swift */; };
+		EB9286C62C78F96000A6FD36 /* ReachCoordinatedSAMLLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9286C52C78F96000A6FD36 /* ReachCoordinatedSAMLLoginModel.swift */; };
 		EBA3DA942C489C0D0069D1CA /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = EBA3DA932C489C0D0069D1CA /* SwiftUIIntrospect */; };
 		EBA3DA972C489C410069D1CA /* Sparkle in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = EBA3DA962C489C410069D1CA /* Sparkle */; };
 		EBA833AA2C47349700729FCF /* ReachLoginWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */; };
 		EBA833AD2C4735BA00729FCF /* ViewBreakpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */; };
-		EBCE57B82C78EC3F00398D9F /* ReachKit in Frameworks */ = {isa = PBXBuildFile; productRef = EB9A80CF2C30BB5300CBCA68 /* ReachKit */; };
+		EBCE57E42C78F4DB00398D9F /* ReachKit in Frameworks */ = {isa = PBXBuildFile; productRef = EBCE57E32C78F4DB00398D9F /* ReachKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB49E7CC2C46CDE400C023DD /* CopyFiles */ = {
+		EB49E7CC2C46CDE400C023DD /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				EB49E7CD2C46CE0E00C023DD /* LoginHelper.app in CopyFiles */,
+				EB49E7CD2C46CE0E00C023DD /* LoginHelper.app in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EB7E99422C30619100A2C78D /* Embed Foundation Extensions */ = {
@@ -90,12 +94,12 @@
 		EB7E992C2C30618F00A2C78D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EB7E99562C3065D400A2C78D /* ReachKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ReachKit; sourceTree = "<group>"; };
 		EB7E99572C3066E800A2C78D /* ReachableDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReachableDebug.entitlements; sourceTree = "<group>"; };
+		EB9286BE2C78F8E200A6FD36 /* ExitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonView.swift; sourceTree = "<group>"; };
+		EB9286C12C78F92900A6FD36 /* ReachCoordinatedBlackbaudLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedBlackbaudLoginModel.swift; sourceTree = "<group>"; };
+		EB9286C32C78F95200A6FD36 /* ReachCoordinatedLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedLoginModel.swift; sourceTree = "<group>"; };
+		EB9286C52C78F96000A6FD36 /* ReachCoordinatedSAMLLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedSAMLLoginModel.swift; sourceTree = "<group>"; };
 		EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachLoginWelcomeView.swift; sourceTree = "<group>"; };
 		EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBreakpoints.swift; sourceTree = "<group>"; };
-		EBCE57DD2C78ED6C00398D9F /* ReachCoordinatedBlackbaudLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedBlackbaudLoginModel.swift; sourceTree = "<group>"; };
-		EBCE57DE2C78ED6C00398D9F /* ReachCoordinatedLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedLoginModel.swift; sourceTree = "<group>"; };
-		EBCE57DF2C78ED6C00398D9F /* ReachCoordinatedSAMLLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedSAMLLoginModel.swift; sourceTree = "<group>"; };
-		EBCE57E12C78ED6F00398D9F /* ExitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonView.swift; sourceTree = "<group>"; };
 		EBF7B4D32C39926B001E803B /* ReachableDebug_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReachableDebug_MacOS.entitlements; sourceTree = "<group>"; };
 		EBF7B4D42C399278001E803B /* Reachable_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reachable_MacOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,10 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBCE57B82C78EC3F00398D9F /* ReachKit in Frameworks */,
 				EBA3DA942C489C0D0069D1CA /* SwiftUIIntrospect in Frameworks */,
 				EBA3DA972C489C410069D1CA /* Sparkle in Frameworks */,
-				EB9A80CE2C30BAD300CBCA68 /* ReachKit in Frameworks */,
+				EBCE57E42C78F4DB00398D9F /* ReachKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,13 +158,13 @@
 		EB7E98EE2C2F017F00A2C78D /* Reachable */ = {
 			isa = PBXGroup;
 			children = (
+				EB9286C02C78F90A00A6FD36 /* Models */,
 				EB39C7622C361F6A0084B1AE /* Info.plist */,
 				EB39F0072C34544900B6B549 /* Reachable.entitlements */,
 				EB7E99572C3066E800A2C78D /* ReachableDebug.entitlements */,
 				EBF7B4D42C399278001E803B /* Reachable_MacOS.entitlements */,
 				EBF7B4D32C39926B001E803B /* ReachableDebug_MacOS.entitlements */,
 				EBA833AB2C47359000729FCF /* Utils */,
-				EBCE57E02C78ED6C00398D9F /* Models */,
 				EB7E99072C2F04BB00A2C78D /* Views */,
 				EB49E7AE2C46B31E00C023DD /* AppDelegateMacOS.swift */,
 				EB7E98EF2C2F017F00A2C78D /* ReachableApp.swift */,
@@ -184,7 +187,7 @@
 		EB7E99072C2F04BB00A2C78D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EBCE57E22C78ED6F00398D9F /* Components */,
+				EB9286BD2C78F8AA00A6FD36 /* Components */,
 				EB7E98F12C2F017F00A2C78D /* ContentView.swift */,
 				EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */,
 				EB7E990B2C2F06AE00A2C78D /* ReachLoginSelectView.swift */,
@@ -207,30 +210,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB9286BD2C78F8AA00A6FD36 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EB9286BE2C78F8E200A6FD36 /* ExitButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EB9286C02C78F90A00A6FD36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EB9286C32C78F95200A6FD36 /* ReachCoordinatedLoginModel.swift */,
+				EB9286C12C78F92900A6FD36 /* ReachCoordinatedBlackbaudLoginModel.swift */,
+				EB9286C52C78F96000A6FD36 /* ReachCoordinatedSAMLLoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EBA833AB2C47359000729FCF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		EBCE57E02C78ED6C00398D9F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				EBCE57DD2C78ED6C00398D9F /* ReachCoordinatedBlackbaudLoginModel.swift */,
-				EBCE57DE2C78ED6C00398D9F /* ReachCoordinatedLoginModel.swift */,
-				EBCE57DF2C78ED6C00398D9F /* ReachCoordinatedSAMLLoginModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		EBCE57E22C78ED6F00398D9F /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				EBCE57E12C78ED6F00398D9F /* ExitButtonView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +263,7 @@
 				EB7E98E82C2F017E00A2C78D /* Sources */,
 				EB7E98E92C2F017E00A2C78D /* Frameworks */,
 				EB7E98EA2C2F017E00A2C78D /* Resources */,
-				EB49E7CC2C46CDE400C023DD /* CopyFiles */,
+				EB49E7CC2C46CDE400C023DD /* Copy Files */,
 				EB7E99422C30619100A2C78D /* Embed Foundation Extensions */,
 				EB7E99552C30648E00A2C78D /* Embed Frameworks */,
 			);
@@ -270,10 +273,9 @@
 			);
 			name = Reachable;
 			packageProductDependencies = (
-				EB9A80CD2C30BAD300CBCA68 /* ReachKit */,
-				EB9A80CF2C30BB5300CBCA68 /* ReachKit */,
 				EBA3DA932C489C0D0069D1CA /* SwiftUIIntrospect */,
 				EBA3DA962C489C410069D1CA /* Sparkle */,
+				EBCE57E32C78F4DB00398D9F /* ReachKit */,
 			);
 			productName = Reachable;
 			productReference = EB7E98EC2C2F017F00A2C78D /* Reachable.app */;
@@ -356,12 +358,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1433E72C3497DF0045601D /* ManageLocationView.swift in Sources */,
+				EB9286BF2C78F8E200A6FD36 /* ExitButtonView.swift in Sources */,
 				EBA833AD2C4735BA00729FCF /* ViewBreakpoints.swift in Sources */,
 				EB7E99132C2F154900A2C78D /* ReachLoginView.swift in Sources */,
 				EB7E990C2C2F06AE00A2C78D /* ReachLoginSelectView.swift in Sources */,
+				EB9286C62C78F96000A6FD36 /* ReachCoordinatedSAMLLoginModel.swift in Sources */,
 				EB49E7AF2C46B31E00C023DD /* AppDelegateMacOS.swift in Sources */,
+				EB9286C22C78F92900A6FD36 /* ReachCoordinatedBlackbaudLoginModel.swift in Sources */,
 				EB7E99112C2F152700A2C78D /* ReachLoginDetailsView.swift in Sources */,
 				EB7E99172C2F7FA500A2C78D /* HomeView.swift in Sources */,
+				EB9286C42C78F95200A6FD36 /* ReachCoordinatedLoginModel.swift in Sources */,
 				EBA833AA2C47349700729FCF /* ReachLoginWelcomeView.swift in Sources */,
 				EB7E991A2C2F806B00A2C78D /* SettingsView.swift in Sources */,
 				EB7E98F22C2F017F00A2C78D /* ContentView.swift in Sources */,
@@ -393,7 +399,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cx.bashed.Reachable.LoginHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +430,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cx.bashed.Reachable.LoginHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,14 +715,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EB9A80CD2C30BAD300CBCA68 /* ReachKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReachKit;
-		};
-		EB9A80CF2C30BB5300CBCA68 /* ReachKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ReachKit;
-		};
 		EBA3DA932C489C0D0069D1CA /* SwiftUIIntrospect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EBA3DA922C489C0D0069D1CA /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
@@ -726,6 +724,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EBA3DA952C489C410069D1CA /* XCRemoteSwiftPackageReference "Sparkle" */;
 			productName = Sparkle;
+		};
+		EBCE57E32C78F4DB00398D9F /* ReachKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ReachKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

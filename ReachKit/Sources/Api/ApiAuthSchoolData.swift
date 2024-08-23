@@ -157,11 +157,17 @@ public enum RKApiAuthSchoolData {
             case .urlConstructionFailed:
                 return String(localized: "api.authSchoolData.urlConstructionFailed")
             case .urlRequestError(let error):
-                return String(format: String(localized: "api.authSchoolData.urlRequestError"), error.localizedDescription)
+                return String(
+                    format: String(localized: "api.authSchoolData.urlRequestError"),
+                    error.localizedDescription)
             case .jsonDecodingFailed(let error):
-                return String(format: String(localized: "api.authSchoolData.jsonDecodingFailed"), error.localizedDescription)
+                return String(
+                    format: String(localized: "api.authSchoolData.jsonDecodingFailed"),
+                    error.localizedDescription)
             case .schoolDataConversionFailed(let error):
-                return String(format: String(localized: "api.authSchoolData.schoolDataConversionFailed"), error.localizedDescription)
+                return String(
+                    format: String(localized: "api.authSchoolData.schoolDataConversionFailed"),
+                    error.localizedDescription)
             }
         }
     }
