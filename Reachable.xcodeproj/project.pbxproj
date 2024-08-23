@@ -28,6 +28,7 @@
 		EBA3DA972C489C410069D1CA /* Sparkle in Frameworks */ = {isa = PBXBuildFile; platformFilters = (macos, ); productRef = EBA3DA962C489C410069D1CA /* Sparkle */; };
 		EBA833AA2C47349700729FCF /* ReachLoginWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */; };
 		EBA833AD2C4735BA00729FCF /* ViewBreakpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */; };
+		EBCE57B82C78EC3F00398D9F /* ReachKit in Frameworks */ = {isa = PBXBuildFile; productRef = EB9A80CF2C30BB5300CBCA68 /* ReachKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,33 +92,13 @@
 		EB7E99572C3066E800A2C78D /* ReachableDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReachableDebug.entitlements; sourceTree = "<group>"; };
 		EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachLoginWelcomeView.swift; sourceTree = "<group>"; };
 		EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBreakpoints.swift; sourceTree = "<group>"; };
+		EBCE57DD2C78ED6C00398D9F /* ReachCoordinatedBlackbaudLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedBlackbaudLoginModel.swift; sourceTree = "<group>"; };
+		EBCE57DE2C78ED6C00398D9F /* ReachCoordinatedLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedLoginModel.swift; sourceTree = "<group>"; };
+		EBCE57DF2C78ED6C00398D9F /* ReachCoordinatedSAMLLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachCoordinatedSAMLLoginModel.swift; sourceTree = "<group>"; };
+		EBCE57E12C78ED6F00398D9F /* ExitButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitButtonView.swift; sourceTree = "<group>"; };
 		EBF7B4D32C39926B001E803B /* ReachableDebug_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReachableDebug_MacOS.entitlements; sourceTree = "<group>"; };
 		EBF7B4D42C399278001E803B /* Reachable_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Reachable_MacOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EB0B98AA2C7091EC00514D66 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ExitButtonView.swift,
-			);
-			target = EB7E98EB2C2F017E00A2C78D /* Reachable */;
-		};
-		EB1A39152C4AACCC00A9BC5C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ReachCoordinatedBlackbaudLoginModel.swift,
-				ReachCoordinatedLoginModel.swift,
-				ReachCoordinatedSAMLLoginModel.swift,
-			);
-			target = EB7E98EB2C2F017E00A2C78D /* Reachable */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EB0B98A62C7091CF00514D66 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (EB0B98AA2C7091EC00514D66 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
-		EB1A39122C4AAC7A00A9BC5C /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (EB1A39152C4AACCC00A9BC5C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EB49E7B42C46C9D700C023DD /* Frameworks */ = {
@@ -131,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBCE57B82C78EC3F00398D9F /* ReachKit in Frameworks */,
 				EBA3DA942C489C0D0069D1CA /* SwiftUIIntrospect in Frameworks */,
 				EBA3DA972C489C410069D1CA /* Sparkle in Frameworks */,
 				EB9A80CE2C30BAD300CBCA68 /* ReachKit in Frameworks */,
@@ -179,7 +161,7 @@
 				EBF7B4D42C399278001E803B /* Reachable_MacOS.entitlements */,
 				EBF7B4D32C39926B001E803B /* ReachableDebug_MacOS.entitlements */,
 				EBA833AB2C47359000729FCF /* Utils */,
-				EB1A39122C4AAC7A00A9BC5C /* Models */,
+				EBCE57E02C78ED6C00398D9F /* Models */,
 				EB7E99072C2F04BB00A2C78D /* Views */,
 				EB49E7AE2C46B31E00C023DD /* AppDelegateMacOS.swift */,
 				EB7E98EF2C2F017F00A2C78D /* ReachableApp.swift */,
@@ -202,7 +184,7 @@
 		EB7E99072C2F04BB00A2C78D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EB0B98A62C7091CF00514D66 /* Components */,
+				EBCE57E22C78ED6F00398D9F /* Components */,
 				EB7E98F12C2F017F00A2C78D /* ContentView.swift */,
 				EBA833A92C47349700729FCF /* ReachLoginWelcomeView.swift */,
 				EB7E990B2C2F06AE00A2C78D /* ReachLoginSelectView.swift */,
@@ -231,6 +213,24 @@
 				EBA833AC2C4735BA00729FCF /* ViewBreakpoints.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EBCE57E02C78ED6C00398D9F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBCE57DD2C78ED6C00398D9F /* ReachCoordinatedBlackbaudLoginModel.swift */,
+				EBCE57DE2C78ED6C00398D9F /* ReachCoordinatedLoginModel.swift */,
+				EBCE57DF2C78ED6C00398D9F /* ReachCoordinatedSAMLLoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBCE57E22C78ED6F00398D9F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EBCE57E12C78ED6F00398D9F /* ExitButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
